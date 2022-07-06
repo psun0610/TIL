@@ -1,6 +1,6 @@
 # Today I Learned!
 
-> **매일매일 복습하고 올리기** (22.07.05~22.12.)
+> **매일매일 복습하고 올리기**!
 
 
 
@@ -8,8 +8,16 @@
 
 - ### Git/ GitHub
 
-  - [마크다운]()
-  - [Git]()
+  - [마크다운](https://github.com/psun0610/TIL/blob/master/markdown/%EB%A7%88%ED%81%AC%EB%8B%A4%EC%9A%B4.md)
+    - 마크업 문법
+  - [Git](https://github.com/psun0610/TIL/blob/master/Git/Git.md)
+    - Git의 기본 명령어(init, add, commit 등)
+    - Git의 기본 구성과 흐름
+    - 파일 라이프사이클
+  - [GitHub](https://github.com/psun0610/TIL/blob/master/Git/GitHub.md)
+    - 원격저장소 기본 흐름
+    - GitHub 기본 명령어
+    - 로컬 저장소의 버전을 원격 저장소에 보내고 받기
 
   
 
