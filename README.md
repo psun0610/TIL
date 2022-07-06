@@ -1,10 +1,10 @@
-# Today I Learned!
+# 📝Today I Learned!
 
 > **매일매일 복습하고 올리기**!
 
 
 
-## 목차
+## 📁목차
 
 - ### Git/ GitHub
 
@@ -41,3 +41,14 @@
 
 - ### 데이터 모델링 활용 풀스택 개발
 
+
+
+## 🧷참고하면 좋은 자료
+
+- [Git Book](https://git-scm.com/book/ko/v2)
+
+
+
+조회수💕
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fgjbae1212%2Fhit-counter&count_bg=%23FFB9C7&title_bg=%235CB5D9&icon=pinboard.svg&icon_color=%23DDD9D9&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
