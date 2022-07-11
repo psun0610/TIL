@@ -32,9 +32,15 @@
 
 
   - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
-  - [파이썬 특징과 기본 문법]()
+  - [파이썬 특징과 기본 문법](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%88.md)
 
-  
+    - 파이썬 언어 특징
+    - 코드 스타일 가이드
+    - 기초 문법
+    - 자료형
+    - 형 변환
+    - 컨테이너
+    - 
 
 - ### 알고리즘을 통한 SW 문제해결 기초
 
