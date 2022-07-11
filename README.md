@@ -30,6 +30,12 @@
 
 - ### 파이썬 프로그래밍
 
+
+  - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
+  - [파이썬 특징과 기본 문법]()
+
+  
+
 - ### 알고리즘을 통한 SW 문제해결 기초
 
 - ### 알고리즘을 통한 SW 문제해결 활용
