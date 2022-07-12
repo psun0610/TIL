@@ -15,6 +15,8 @@
 
 
 
+
+
 >### 인터프리터 언어 VS 컴파일 언어
 >
 >**인터프리터 언어**는 원시코드를 기계어로 변환하는 컴파일 과정이 없이 한줄 한줄 해석하여 바로 명령어를 실행하는 언어
@@ -33,7 +35,7 @@
 >
 >대표적으로 C, C++, JAVA 등이 있음
 
----
+
 
 
 
@@ -43,7 +45,7 @@
 
 - 기업, 오픈소스 등에서 사용되는 스타일 가이드: [Google Style guide](https://google.github.io/styleguide/pyguide.html)
 
----
+
 
 
 
@@ -70,6 +72,8 @@ id(x)
 
 
 
+
+
 ### 변수 할당
 
 - 같은 값 동시에 할당
@@ -83,6 +87,8 @@ id(x)
   ```python
   x, y = 1, 2
   ```
+
+
 
 
 
@@ -104,6 +110,8 @@ s + ' is fun'
 
 
 
+
+
 ### 식별자
 
 - 파이썬 객체(변수, 함수, 모듈, 클래스 등)을 식별하는데 사용하는 이름
@@ -115,6 +123,8 @@ s + ' is fun'
     - False, None, True, and, as, assert, async, await,  break, class, continue, def, del, elif, else, except, finally,  for, from, global, if, import, in, is, lambda, nonlocal,  not, or, pass, raise, return, try, while, with, yield
   - 내장함수나 모듈 등의 이름으로도 만들면 안됨
     - 기존의 이름에 다른 값을 할당하게 되므로 더 이상 동작하지 않게 됨
+
+
 
 
 
@@ -132,6 +142,8 @@ print(name)
 type(name)
 # str
 ```
+
+
 
 
 
@@ -155,7 +167,7 @@ type(name)
 """
 ```
 
----
+
 
 
 
@@ -175,6 +187,8 @@ type(name)
 
 
 
+
+
 ### 수치형(Numeric Type)
 
 - int(정수, integer)
@@ -182,7 +196,10 @@ type(name)
   - 모든 정수의 타입은 int (long, long long 없음)
   - 매우 큰 수를 나타낼 때에도 오버플로우가 발생하지 않음
 
-  
+
+
+
+
 
 - float(부동소수점, 실수, floating point number)
 
@@ -214,7 +231,7 @@ type(name)
 
 - 산술 연산자
 
-	| 연산자 |     내용     |
+| 연산자 |     내용     |
   | :----: | :----------: |
   |   +    |     덧셈     |
   |   -    |     뺄셈     |
@@ -254,6 +271,8 @@ type(name)
 |   !=   |          같지않음           |
 |   is   |    객체 아이덴티티(OPP)     |
 | is not | 객체 아이덴티티가 아닌 경우 |
+
+
 
 
 
@@ -387,7 +406,10 @@ type(name)
          print(char)
      ```
 
-     
+
+
+
+
 
 
 ### None
@@ -397,9 +419,13 @@ type(name)
 
 
 
+
+
 ## 형 변환
 
 > 데이터의 자료형은 서로 변환 가능
+
+
 
 
 
@@ -420,7 +446,10 @@ type(name)
     # (8+4j)
     ```
 
-    
+
+
+
+
 
 ### 명시적 형 변환
 
@@ -450,7 +479,10 @@ type(name)
     # 8.5
     ```
 
-    
+
+
+
+
 
 ## 컨테이너
 
@@ -473,6 +505,8 @@ type(name)
 
 
 
+
+
 ## 시퀀스형 컨테이너
 
 |       연산       |                          결과                           |
@@ -487,6 +521,8 @@ type(name)
 |      len(s)      |                        s의 길이                         |
 |      min(s)      |                   s의 가장 작은 항목                    |
 |      max(s)      |                    s의 가장 큰 항목                     |
+
+
 
 
 
@@ -518,7 +554,10 @@ type(name)
   # num => [4, 6, 8]
   ```
 
-  
+
+
+
+
 
 ### 튜플
 
@@ -527,6 +566,8 @@ type(name)
 - 변경 불가능(immutable), 반복 가능(iterable)
 - `myTuple = (0, 1, 3)` 혹은 `myTuple = tuple()`로 생성
 - 값 추가, 삭제, 변경 불가능
+
+
 
 
 
@@ -541,7 +582,7 @@ type(name)
 
 
 
----
+
 
 ## 비시퀀스형 컨테이너
 
@@ -592,6 +633,8 @@ type(name)
 - **다른 컨테이너에서 중복된 값을 제거할 때** 세트의 특성을 사용함: ex) `myList = list(set(myList))`
 
   - 주의! 이후에 순서가 무시되므로 순서가 중요한 경우 사용X
+
+
 
 
 
