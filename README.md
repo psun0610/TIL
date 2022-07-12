@@ -40,7 +40,9 @@
     - 자료형
     - 형 변환
     - 컨테이너
-    - 
+
+
+
 
 - ### 알고리즘을 통한 SW 문제해결 기초
 
@@ -66,7 +68,7 @@
 
 - [Git Book](https://git-scm.com/book/ko/v2)
 
-
+- [Python Tutor](https://pythontutor.com/)
 
 조회수💕
 
