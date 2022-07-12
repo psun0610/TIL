@@ -31,15 +31,23 @@
 - ### 파이썬 프로그래밍
 
 
-  - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
-  - [파이썬 특징과 기본 문법](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%88.md)
+    - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
 
-    - 파이썬 언어 특징
-    - 코드 스타일 가이드
-    - 기초 문법
-    - 자료형
-    - 형 변환
-    - 컨테이너
+
+    - [파이썬 특징과 기본 문법](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%88.md)
+      - 파이썬 언어 특징
+      - 코드 스타일 가이드
+      - 기초 문법
+      - 자료형
+      - 형 변환
+      - 컨테이너
+
+
+    - [파이썬 제어문](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%882.md)
+
+      - 조건문
+      - 반복문
+
 
 
 
@@ -66,10 +74,13 @@
 
 ## 🧷참고하면 좋은 자료
 
-- [Git Book](https://git-scm.com/book/ko/v2)
+- Git 관련 정보들: [Git Book](https://git-scm.com/book/ko/v2)
+- 웹에서 바로 파이썬 작성을 도와주는 튜터: [Python Tutor](https://pythontutor.com/)
+- 파이썬에서 제안하는 스타일 가이드: [PEP8](https://www.python.org/dev/peps/pep-0008/) 
+- 기업, 오픈소스 등에서 사용되는 스타일 가이드: [Google Style guide](https://google.github.io/styleguide/pyguide.html)
 
-- [Python Tutor](https://pythontutor.com/)
 
-조회수💕
+
+[💕**조회수💕**]
 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fpsun0610&count_bg=%23FFACC5&title_bg=%2338B2D2C7&icon=&icon_color=%23E7E7E7&title=TIL&edge_flat=false)](https://hits.seeyoufarm.com)
