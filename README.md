@@ -30,25 +30,17 @@
 
 - ### 파이썬 프로그래밍
 
-
-    - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
-
-
-    - [파이썬 특징과 기본 문법](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%88.md)
-      - 파이썬 언어 특징
-      - 코드 스타일 가이드
-      - 기초 문법
-      - 자료형
-      - 형 변환
-      - 컨테이너
-
-
-    - [파이썬 제어문](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%882.md)
-
-      - 조건문
-      - 반복문
-
-
+  - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
+  - [파이썬 특징과 기본 문법](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%881.md)
+    - 파이썬 언어 특징
+    - 코드 스타일 가이드
+    - 기초 문법
+    - 자료형
+    - 형 변환
+    - 컨테이너
+  - [파이썬 제어문](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%882.md)
+    - 조건문
+    - 반복문
 
 
 
