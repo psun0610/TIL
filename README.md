@@ -70,6 +70,8 @@
 - 웹에서 바로 파이썬 작성을 도와주는 튜터: [Python Tutor](https://pythontutor.com/)
 - 파이썬에서 제안하는 스타일 가이드: [PEP8](https://www.python.org/dev/peps/pep-0008/) 
 - 기업, 오픈소스 등에서 사용되는 스타일 가이드: [Google Style guide](https://google.github.io/styleguide/pyguide.html)
+- 파이썬 자습서: [Python 공식 문서 - 자습서](https://docs.python.org/ko/3/tutorial/index.html)
+- 파이썬 표준 라이브러리 레퍼런스: [Python 공식 문서 - 라이브러리 레퍼런스](https://docs.python.org/ko/3/library/index.html)
 
 
 
