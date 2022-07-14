@@ -53,7 +53,7 @@ print(word[::-1])
 '''
 
 # 13-2
-# 문자열 인덱스 이용하여 풀이
+# 문자열 인덱스 이용하여 풀이 ***중요***
 word = input()
 cnt = 0
 for char in word:
