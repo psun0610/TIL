@@ -47,6 +47,22 @@ GitHub를 사용하여 버전관리와 협업을 더 효율적으로 할 수 있
 
   - 원격저장소 삭제
 
+- `$ git reset HEAD [file명]`
+
+  - 특정 파일 git add 취소
+
+- `$ git reset -- soft HEAD^`
+
+  - commit을 취소하고 해당 파일들을 staged 상태로 워킹 디렉토리에 보관
+
+- `$ git reset -- hard HEAD^`
+
+  - commit을 취소하고 해당 파일들을 unstaged 상태로 워킹 디렉토리에서 삭제
+
+- `$ git commit --amend`
+
+  - commit message를 잘못 적은 경우, commit message 변경
+
   
 
 ## 로컬 저장소의 버전을 원격 저장소에 보내고 받기
