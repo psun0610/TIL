@@ -3,7 +3,6 @@
 > **매일매일 복습하고 올리기**!
 
 
-
 ## 📁목차
 
 - ### Git/ GitHub
@@ -27,7 +26,6 @@
 
 
 
-
 - ### 파이썬 프로그래밍
 
   - [codeup 100제 풀이](https://github.com/psun0610/TIL/tree/master/Python/codeup)
@@ -41,7 +39,20 @@
   - [파이썬 제어문](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%882.md)
     - 조건문
     - 반복문
-
+  - [파이썬 함수](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%883.md)
+    - 함수
+    - 함수의 결과값
+    - 함수의 입력
+    - 함수의 범위
+    - 함수 응용
+  - [파이썬 메서드](https://github.com/psun0610/TIL/blob/master/Python/Python%EA%B8%B0%EC%B4%884.md)
+    - 메서드
+    - 시퀀스
+      - 문자열
+      - 리스트
+    - 컬렉션
+      - 세트
+      - 딕셔너리
 
 
 - ### 알고리즘을 통한 SW 문제해결 기초
