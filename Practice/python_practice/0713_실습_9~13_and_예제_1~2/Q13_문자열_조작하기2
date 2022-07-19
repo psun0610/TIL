@@ -1,0 +1,15 @@
+# 13-1. 문자열 조작하기2
+# 주어진 문자열 word가 주어질 때, 해당 단어를 역순으로 뒤집은 결과를 출력하시오.
+
+# 방법 1
+word = input()
+print(word[::-1])
+
+
+# 방법 2
+# 문자열 인덱스 이용하여 풀이 ***중요***
+word = input()
+cnt = 0
+for char in word:
+    print(word[len(word)-cnt-1], end='')
+    cnt += 1

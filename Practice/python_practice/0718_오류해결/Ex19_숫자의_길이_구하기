@@ -1,0 +1,20 @@
+# 문제19. 숫자의 길이 구하기
+# 양의 정수 number가 주어질 때, 숫자의 길이를 구하시오. 
+# 양의 정수number를 문자열로 변경하는 것은 금지입니다. str() 사용 금지
+
+# 방법 1
+number = int(input())
+length = 0
+while number >= 1:  # while number: 로 해도 됨!!!
+    number //= 10
+    length += 1
+print(length)
+
+# 방법 2
+import math
+number = 123456
+print(int(math.log(number,10)) + 1)
+
+# 방법 3
+number = 123456
+print(len(str(number)))

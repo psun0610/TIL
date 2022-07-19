@@ -264,8 +264,21 @@ if __name__ == "__main__":
 '''
 number = int(input())
 length = 0
-while number >= 1:
-    number = number//10
+while number >= 1:  # while number: 로 해도 됨!!!
+    number //= 10
     length += 1
 print(length)
+'''
+
+'''
+방법 2
+import math
+number = 123456
+print(int(math.log(number,10)) + 1)
+'''
+
+'''
+방법 3
+number = 123456
+print(len(str(number)))
 '''
