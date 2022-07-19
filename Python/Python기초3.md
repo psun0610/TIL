@@ -74,18 +74,18 @@
   function('spam') # argument: 'spam'
   ```
 
-- Argument란?
-  - 함수 호출 시 함수의 Parameter를 통해 전달되는 값
-  - 소괄호 안에 할당 function_name(**argument**)
-  - 필수 Argument와 선택 Argument로 나뉨
-    - 필수 Argument: 반드시 전달되어야 하는 argument
-    - 선택 Argument: 값을 전달하지 않아도 되는 경우에 기본 값 전달 (Parameter에 이미 기본 값이 설정되어 있는 경우)
-  - Positional Arguments
-    - 기본적으로 함수 호출 시 Argument는 위치에 따라 함수에 전달됨
-  - Keyword Arguments
-    - 직접 변수의 이름으로 특정 Argument를 전달할 수 있음
-    - **Keyword Argument 다음에 Positional Argument를 활용할 수 없음** (이미 위치가 흐트러졌기 때문에)
-    ```python
+### Argument란?
+- 함수 호출 시 함수의 Parameter를 통해 전달되는 값
+- 소괄호 안에 할당 function_name(**argument**)
+- 필수 Argument와 선택 Argument로 나뉨
+  - 필수 Argument: 반드시 전달되어야 하는 argument
+  - 선택 Argument: 값을 전달하지 않아도 되는 경우에 기본 값 전달 (Parameter에 이미 기본 값이 설정되어 있는 경우)
+- Positional Arguments
+  - 기본적으로 함수 호출 시 Argument는 위치에 따라 함수에 전달됨
+- Keyword Arguments
+  - 직접 변수의 이름으로 특정 Argument를 전달할 수 있음
+  - **Keyword Argument 다음에 Positional Argument를 활용할 수 없음** (이미 위치가 흐트러졌기 때문에)
+   ```python
     def add(x, y):
       return x+y
     
@@ -93,58 +93,58 @@
     add(y=5, x=2)
     add(2, y=5)
     add(y=5, 2) # 에러발생! Keyword Argument 다음에 Positional Argument가 위치했기 때문
-    ```
-  - Default Arguments Values
-    - 기본값을 지정하여 Argument 값을 설정하지 않아도 되게 함
-    - 정의된 것 보다 더 적은 개수의 argument들로 호출 될 수 있음
-    ```python
+   ```
+- Default Arguments Values
+  - 기본값을 지정하여 Argument 값을 설정하지 않아도 되게 함
+  - 정의된 것 보다 더 적은 개수의 argument들로 호출 될 수 있음
+   ```python
     def add(x, y=0):
       return x+y
 
     add(2)
     # 2
-    ```
-  - **정해지지 않은 개수의 Arguments**
-    - 여러 개의 Positional Argument를 하나의 필수 parameter로 받아서 사용
-    - Argument들은 **튜플**로 묶여서 처리됨
-    - parameter의 앞에 *를 붙여 표현
-    ```python
+   ```
+- **정해지지 않은 개수의 Arguments**
+  - 여러 개의 Positional Argument를 하나의 필수 parameter로 받아서 사용
+  - Argument들은 **튜플**로 묶여서 처리됨
+  - parameter의 앞에 *를 붙여 표현
+   ```python
     def add(*args):
       for arg in args:
         print(arg)
     
     add(2)
     add(2, 3, 4, 5)
-    ```
-  - **정해지지 않은 개수의 Keyword Arguments**
-    - 여러 개의 KeyWord Argument를 하나의 필수 parameter로 받아서 사용
-    - Argument들은 **딕셔너리**로 묶여 처리
-    - parameter의 앞에 **를 붙여 표현
-    ```python
+   ```
+- **정해지지 않은 개수의 Keyword Arguments**
+  - 여러 개의 KeyWord Argument를 하나의 필수 parameter로 받아서 사용
+  - Argument들은 **딕셔너리**로 묶여 처리
+  - parameter의 앞에 **를 붙여 표현
+   ```python
     def family(**kwargs):
       for key, value in kwargs:
         print(key, ':', value)
 
     family(father='John', mother='Jane', me='John Jr.')
-    ```
+   ```
   
 ## 함수의 범위(Scope)
-- 함수는 코드 내부에 local scope를 생성함
-- 그 외의 공간은 global scope로 구분
+> 함수는 코드 내부에 local scope를 생성함
+> 그 외의 공간은 global scope로 구분
 
-- scope
+### scope
   - global scope: 코드 어디에서든 참조할 수 있는 공간
   - local scope: 함수가 만든 scope, 함수 내부에서만 참조 가능
 - variable
   - global variable: global scope에 정의된 변수
   - local variable: local scope에 정의된 변수
 
-- 객체 생명 주기
+### 객체 생명 주기
   - built-in scope: 파이썬이 실행된 이후부터 영원히 유지
   - global scope: 모듈이 호출된 시점 이후 혹은 인터프리터가 끝날 때까지 유지
   - local scope: 함수가 호출될 때 생성, 함수가 종료될 때까지 유지
 
-- 이름 검색 규칙(Name Resolution)
+### 이름 검색 규칙(Name Resolution)
   - 파이썬에서 사용되는 이름(식별자)들은 namespace에 저장되어 있음
   - **LEGB Rule**
     - **L**ocal scope: 함수

@@ -12,7 +12,7 @@
 
 ## 조건문
 
-- ### if <조건식>: ~ else: ~
+### if <조건식>: ~ else: ~
 
   ```python
   num = int(input())
@@ -23,7 +23,7 @@
   print(num)
   ```
 
-- ### **복수 조건문**  if <조건식>: ~ elif <조건식>: ~
+### **복수 조건문**  if <조건식>: ~ elif <조건식>: ~
 
   ```python
   dust = 80
@@ -39,7 +39,7 @@
   print('미세먼지 확인 완료')
   ```
 
-- ### **중첩 조건문**  if <조건식>: ~ *if <조건식>:* ~ else: ~
+### **중첩 조건문**  if <조건식>: ~ *if <조건식>:* ~ else: ~
 
   ```python
   dust = -10
@@ -58,7 +58,7 @@
           print('값이 잘못되었습니다.')
   ```
 
-- ### **조건표현식**  <true인 경우 값> if <조건식> else <false인 경우 값>
+### **조건표현식**  <true인 경우 값> if <조건식> else <false인 경우 값>
 
   ```python
   value = num if num >= 0 else -num
@@ -70,7 +70,7 @@
 
 ## 반복문
 
-- ### while 문
+### while 문
 
   - 조건식이 참인 경우 반복적으로 코드를 실행
 
@@ -90,7 +90,7 @@
 
   
 
-- ### for 문
+### for 문
 
   - 순회 가능한 객체 요소를 **모두** 순회함 (시퀀스 포함), 종료조건 필요X
 
@@ -156,7 +156,7 @@
 
     
 
-- ### 반복 제어: break, continue, for-else
+### 반복 제어: break, continue, for-else
 
   - **break**: 반복문을 종료
 
