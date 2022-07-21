@@ -9,7 +9,7 @@ while number:
 print(total)
 
 # 방법 2
-# dimod(x, y)는 x를 y로 나누고, 결과를 tuple로 반환 => (몫, 나머지)
+# divmod(x, y)는 x를 y로 나누고, 결과를 tuple로 반환 => (몫, 나머지)
 number = int(input())
 total = 0
 while number:
