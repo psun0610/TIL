@@ -30,14 +30,15 @@
 
 # ( 민석이는 xN번 양을 세고 있다. )
 
-
+'''
+# 방법 1
 T = int(input())
 for test_case in range(1, T + 1):
     N = int(input())
     multiple = 0
     result = []
     while result != [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
-        multiple += 1       # count 는 multiple-1
+        multiple += 1
         tmp_n = N * multiple
         this_num = []
 
@@ -46,6 +47,22 @@ for test_case in range(1, T + 1):
             tmp_n //= 10
 
         result += this_num
+        result = sorted(list(set(result)))
+
+    print(f'#{test_case} {N * multiple}')
+'''
+
+# 방법 2
+T = int(input())
+for test_case in range(1, T + 1):
+    N = int(input())
+    multiple = 0
+    result = []
+    while result != ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+        multiple += 1
+        tmp = N * multiple
+
+        result += list(str(tmp))
         result = sorted(list(set(result)))
 
     print(f'#{test_case} {N * multiple}')
