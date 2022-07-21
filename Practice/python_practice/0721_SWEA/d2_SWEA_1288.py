@@ -58,7 +58,8 @@ for test_case in range(1, T + 1):
     N = int(input())
     multiple = 0
     result = []
-    while result != ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+    # while result != ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+    while len(result) <= 10:
         multiple += 1
         tmp = N * multiple
 
