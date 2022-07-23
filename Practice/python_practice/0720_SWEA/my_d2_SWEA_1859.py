@@ -21,6 +21,9 @@
 # 1번째 케이스는 아무 것도 사지 않는 것이 최대 이익이다.
 # 2번째 케이스는 1,2일에 각각 한 개씩 사서 세 번째 날에 두 개를 팔면 10의 이익을 얻을 수 있다.
 
+# import sys
+# sys.stdin = open("input.txt", "r")
+
 T = int(input())
 for test_case in range(1, T+1):
     # 입력받기
@@ -29,7 +32,7 @@ for test_case in range(1, T+1):
     earn = 0
     max_price_idx = price.index(max(price))
     
-    # 현재 최댓값과 그 다음 리스트의 최댓값의 인덱스의 차이가 1이면 종료
+    # 최댓값의 인덱스가 0이면 종료
     while max_price_idx != 0:
         buy = 0
         # 남은 리스트의 최댓값 전까지 모두 사서 최댓값에서 팜
@@ -38,8 +41,10 @@ for test_case in range(1, T+1):
             buy += price[i]
         earn += max_price_idx * max(price) - buy
         # 최댓값 뒤부터 다시 리스트 만듦
-        price = price[max_price_idx:]
-        # 최댓값 다시 구함
-        max_price_idx = price.index(max(price))
-
+        price = price[max_price_idx + 1:]
+        # 최댓값 다시 구함 (리스트가 비어있지 않을 경우)
+        if len(price) != 0:
+            max_price_idx = price.index(max(price))
+        else:
+            max_price_idx = 0
     print(f'#{test_case} {earn}')
