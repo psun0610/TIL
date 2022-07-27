@@ -167,4 +167,4 @@ print(list(result))    # 리스트 형변환을 통해 결과 직접 확인 가�
 |       | csh/tchs        | ` $ source <venv> /bin/activate.csh`  |
 |       | PowerShell Core | `$ <venv> /bin/Activate.ps1`          |
 | 윈도우   | cmd.exe         | `C:\> <venv> \Scripts\activate.bat`   |
-|       | PoserShell      |                                       |
+|       | PoserShell      |     `PS C:\> \Scripts\Activate.ps1`     |
