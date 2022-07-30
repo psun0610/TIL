@@ -81,6 +81,9 @@
               - 캡슐화
 
 ## 알고리즘을 통한 SW 문제해결 기초
+- [알고리즘 풀이](https://github.com/psun0610/TIL/tree/master/Algorithm_Practice)
+    - SWEA, BOJ, Programmers 등 다양한 플랫폼에서 풀이해보기!
+
 
 ## 알고리즘을 통한 SW 문제해결 활용
 
