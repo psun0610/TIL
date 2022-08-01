@@ -1,8 +1,8 @@
 # @가 나올때마다 count하면 됨
 taebo = input()
 left_punch = 0
-turn = False
 right_punch = 0
+turn = False
 for punch in taebo:
     if punch in '(^0^)':
         turn = True
