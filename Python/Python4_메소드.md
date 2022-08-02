@@ -6,16 +6,18 @@
 ## 시퀀스(순서가 있는 데이터 구조)
 ### 문자열
   - 문자열 탐색/ 검증
-| 문법           | 설명 |
-|:------------:|:--:|
-| s.find(x)    |    |
-| s.index(x)   |    |
-| s.isalpha(x) |    |
-| s.isupper()  |    |
-| s.islower()  |    |
-|              |    |
+
+| 문법           | 설명                         |
+|:------------:|:--------------------------:|
+| s.find(x)    | x의 첫 번째 위치를 반환. 없으면, -1 반환 |
+| s.index(x)   | x의 첫 번째 위치를 반환. 없으면, 오류 발생 |
+| s.isalpha(x) | 알파벳 문자 여부                  |
+| s.isupper()  | 대문자 여부                     |
+| s.islower()  | 소문자 여부                     |
+| s.istitle()  |                            |
 
 - 문자열 변경
+
 | 문법                              | 설명                       |
 |:-------------------------------:|:------------------------:|
 | s.replace(old, new, *count*)    | 바꿀 대상 글자를 새로운 글자로 바꿔서 반환 |
@@ -54,8 +56,8 @@
 | L.index(x)             | 가장 처음 나온 x값의 index값 반환, 없는 경우 ValueError  |
 | L.index(x, start, end) | 리스트에 있는 항목 중 가장 왼쪽에 있는 x의 인덱스를 반환         |
 | L.reverse()            | 리스트를 거꾸로 뒤집음, None 반환                     |
-| L.sort()               | 리스트 정렬, None  반환/ sorted 함수와 비교할 것        |
-| L.count(x)             |                                           |
+| L.sort()               | 리스트 정렬, None  반환/ sorted 함수와 비교할 것**      |
+| L.count(x)             | x의 개수를 반환                                 |
 
   - sorted()함수 VS .sort()
   ```python
@@ -96,5 +98,5 @@
 | d.items()        |    |
 | d.get(k, v=None) |    |
 | d.pop(k)         |    |
-|                  |    |
-|                  |    |
+| d.pop(k, v)      |    |
+| d.update(other   |    |
