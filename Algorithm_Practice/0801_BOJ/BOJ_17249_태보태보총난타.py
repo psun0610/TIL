@@ -13,3 +13,10 @@ for punch in taebo:     # @===@==@=@==(^0^)==@=@===@
         if punch == '@':
             right_punch += 1
 print(left_punch, right_punch)
+
+# 방법 2
+taebo = input()
+turn_index = taebo.find('(^0^)')
+left = taebo[:turn_index]
+right = taebo[turn_index+6:]
+print(left.count('@'), right.count('@'))
