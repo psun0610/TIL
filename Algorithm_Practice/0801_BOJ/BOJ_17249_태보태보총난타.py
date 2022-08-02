@@ -3,7 +3,7 @@ taebo = input()
 left_punch = 0
 right_punch = 0
 turn = False
-for punch in taebo:
+for punch in taebo:     # @===@==@=@==(^0^)==@=@===@
     if punch in '(^0^)':
         turn = True
     if turn == False:
