@@ -15,7 +15,7 @@
 | s.isalpha(x) | 알파벳 문자 여부                  |
 | s.isupper()  | 대문자 여부                     |
 | s.islower()  | 소문자 여부                     |
-| s.istitle()  |                            |
+| s.istitle()  |  타이틀 형식 여부 (띄어쓰기 앞 글자가 모두 upper 인지 여부)    |
 
 - 문자열 변경
 
@@ -93,11 +93,12 @@
 ### 딕셔너리
 | 문법               | 설명 |
 |:----------------:|:--:|
-| d.clear()        |    |
-| d.keys()         |    |
-| d.values()       |    |
-| d.items()        |    |
-| d.get(k, v=None) |    |
-| d.pop(k)         |    |
-| d.pop(k, v)      |    |
-| d.update(other   |    |
+| d.clear()        | 모든 항목 제거   |
+| d.keys()         | 딕셔너리 d의 모든 키를 담은 뷰를 반환   |
+| d.values()       | 딕셔너리 d의 모든 값을 담은 뷰를 반환   |
+| d.items()        | 딕셔너리 d의 모든 키-값의 쌍을 담은 뷰를 반환   |
+| d.get(k, v=None) | 키 k의 값을 반환하는데, k가 d에 없을 경우 v 또는 None을 반환   |
+| d.pop(k)         | 키 k의 값을 반환하고 키 k인 항목을 삭제하는데 k가 없을 경우 KeyError   |
+| d.pop(k, v)      | 키 k의 값을 반환하고 키 k인 항목을 삭제하는데 k가 없을 경우 v 반환   |
+| d.update(other   | 딕셔너리 d의 값을 매핑하여 업데이트 (덮어씀)   |
+
