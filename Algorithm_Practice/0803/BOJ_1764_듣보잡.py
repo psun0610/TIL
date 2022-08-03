@@ -1,3 +1,4 @@
+# 리스트 방법 -> 시간초과
 n, m = map(int, input().split())
 listen = [input() for _ in range(n)]
 watch = [input() for _ in range(m)]
@@ -13,6 +14,7 @@ for a in answer:
     print(a)
 
 #============================================
+# 딕셔너리 방법
 dict_ = dict()
 n, m = map(int, input().split())
 for _ in range(n):
