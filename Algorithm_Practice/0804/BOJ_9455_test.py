@@ -9,7 +9,6 @@ for _ in range(int(input())):
 
     movecnt = 0
     for i in range(n):
-        boxNum = grid[i].count('1')
         floor = m - 1
 
         for j in range(m-1, -1, -1):
