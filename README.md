@@ -104,6 +104,11 @@
 - [힙, 셋](https://github.com/psun0610/TIL/blob/master/04_DataStructure/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B06_%ED%9E%99_%EC%85%8B.md)
 
 ## 알고리즘을 통한 SW 문제해결 활용
+- [이차원 리스트](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%981_%EC%9D%B4%EC%B0%A8%EC%9B%90%EB%A6%AC%EC%8A%A4%ED%8A%B8.md)
+    - 초기화 (반복문, 리스트 컴프리헨션)
+    - 입력받기
+- [이차원 리스트의 순회, 전치, 회전](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%982_%EC%9D%B4%EC%B0%A8%EC%9B%90%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%88%9C%ED%9A%8C_%EC%A0%84%EC%B9%98_%ED%9A%8C%EC%A0%84.md)
+
 
 ## 프론트엔드 애플리케이션 구현
 
