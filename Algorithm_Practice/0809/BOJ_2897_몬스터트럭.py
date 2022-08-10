@@ -5,7 +5,6 @@ parking = [0] * 5
 for y in range(r):
     for x in range(c):
         breakcnt = 0    # 자동차를 몇 개 부쉈는지 세기 위한 변수 선언
-        cnt = 0         # 델타를 모두 반복했는지 확인하기 위한 임시 변수 cnt 선언
         for d in delta:
             ny = y + d[0]
             nx = x + d[1]
@@ -15,7 +14,7 @@ for y in range(r):
             if matrix[ny][nx] == 'X':       # 다른 자동차가 있는 자리이면 
                 breakcnt += 1               # 다른 차를 몇 개 부쉈는지 셈
 
-        if cnt == 4:                        # 만약에 중간에 break되지 않고 델타를 모두 반복했다면 (cnt가 3이라면)
+        else:                               # 만약에 중간에 break되지 않고 델타를 모두 반복했다면
             parking[breakcnt] += 1          # +1 해줌
 
 # 출력부
