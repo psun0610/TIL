@@ -25,3 +25,4 @@ for i in range(max(len_list)):
     for word in words:
         if len(word) - 1 >= i:
             print(word[i], end = '')
+            
