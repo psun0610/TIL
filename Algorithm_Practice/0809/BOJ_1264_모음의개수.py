@@ -1,8 +1,9 @@
 alpha = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
-sent = input()
-while sent != '#':
+while 1:
+    sent = input()
+    if sent == '#':
+        break
     cnt = 0
     for a in alpha:
         cnt += sent.count(a)
     print(cnt)
-    sent = input()
