@@ -122,9 +122,9 @@
 
 
 
-# 테이블 생성 및 삭제
+# 테이블 생성 ~ 삭제
 
-## 데이터베이스 생성하기
+## 데이터베이스 생성
 
 ```sqlite
 sqlite3 tutorial.sqlite3
@@ -138,11 +138,253 @@ sqlite> .database
 ## csv 파일을 table로 만들기
 
 ```sqlite
-.mode csv
-.import hellodb.csv examples
+sqlite> .mode csv
+-- csv 파일을 examples 테이블의 값으로 한 번에 받아오기
+sqlite> .import hellodb.csv examples
 
 -- 테이블 만들어졌는지 확인
-.tables
+sqlite> .tables
 examples
+```
+
+
+
+## 테이블 생성 (CREATE)
+
+> 데이터베이스에서 테이블 생성
+
+```sqlite
+sqlite> CREATE TABLE classmates (
+   ...> id INTEGER PRIMARY KEY,
+   ...> name TEXT
+   ...> );
+```
+
+### 현재 테이블 조회
+
+```sqlite
+.tables
+classmates examples
+```
+
+### 특정 테이블의 schema 조회
+
+```sqlite
+sqlite> .schema classmates
+CREATE TABLE classmates (
+	id INTEGER PRIMARY KEY,
+    name TEXT
+);
+```
+
+
+
+## 테이블에서 데이터 조회 (SELECT)
+
+```sqlite
+sqlite> SELECT * FROM examples;
+
+1, "길동", "홍", 600, "충청도", 010-0000-0000
+
+-- 컬럼명 같이 보여줌
+sqlite> .headers on
+sqlite> SELECT * FROM examples;
+id, first_name, last_name, age, country, phone
+1, "길동", "홍", 600, "충청도", 010-0000-0000
+
+-- 컬럼과 구분지어주는 선을 그어주고 보기 좋게 정렬해줌
+sqlite> .mode column
+sqlite> SELECT * FROM examples;
+id  first_name  last_name  age  country  phone
+--  ----------  ---------  ---  -------  ------------
+1   "길동"       "홍"       600  "충청도"  010-0000-0000
+
+SELECT * FROM examples;
+```
+
+
+
+## 테이블 삭제 (DROP)
+
+```sqlite
+sqlite> DROP TABLE classmates;
+sqlite> .tables
+examples
+```
+
+
+
+## 필드 제약 조건 (스키마 작성시)
+
+- NOT NULL: NULL 값 입력 금지
+- UNIQUE: 중복 값 입력 금지 (NULL 값은 중복 입력 가능)
+- PRIMARY KEY: 테이블에서 반드시 하나, NOT NULL + UNIQUE
+- FOREIGN KEY: 외래키, 다른 테이블의 Key
+- CHECK: 조건으로 설정된 값만 입력 허용
+- DEFAULT: 기본 설정 값
+
+
+
+```sqlite
+CREATE TABLE students(
+	id INTEGER PRIMARY KEY,
+	name TEXT NOT NULL,
+	age INTEGER DEFAULT 1 CHECK (0 < age)
+);
+```
+
+- `id`컬럼은 정수값을 받고 PK(유일한 값)다.
+
+- `name`컬럼은 문자열을 받고 `NOT NULL`에 의해 비어있는 것을 허용하지 않는다.
+
+- `age`컬럼은 정수값을 받고 `DEFAULT 1`에 의해 기본 값이 1이다. (age값이 주어지지 않았을 때 1로 저장된다)
+- `age`컬럼은 `CHECK (0 < age)`에 의해 age값이 0보다 커야 한다.
+
+
+
+# CRUD
+
+## CREATE
+
+> INSERT: 테이블에 행 삽입
+
+- 테이블에 단일 행 삽입 (각 value에 맞게 컬럼 작성)
+
+  ```sqlite
+  INSERT INTO 테이블_이름 (컬럼1, 컬럼2) VALUES (값1, 값2);
+  ```
+
+- 테이블에 정의된 모든 컬럼에 맞춰 순서대로 입력
+
+  ```sqlite
+  INSERT INTO 테이블_이름 VALUES (값1, 값2, 값3);
+  ```
+
+### practice
+
+> classmate 테이블에 이름이 홍길동이고 나이가 23인 데이터를 넣어보자
+
+```sqlite
+INSERT INTO classmates (name, age) VALUES ('홍길동', 23);
+```
+
+
+
+> classmates 테이블에 이름이 홍길동, 나이가 30, 주소가 서울인 데이터 넣어보자
+
+```sqlite
+INSERT INTO classmates VALUES ('홍길동', 30, '서울');
+```
+
+이때는 모든 컬럼의 값을 다 지정해줬기 때문에 위의 문제처럼 컬럼명을 따로 지정해주지 않아도 된다.
+
+
+
+## Primary Key를 따로 지정해주지 않아도 괜찮을까?
+
+> 아래처럼 PK가 없다면?
+
+```sqlite
+sqlite> SELECT * FROM classmates;
+name       age        address
+---------  ---------  ----------
+홍길동		  23
+홍길동		  30		 서울
+```
+
+### rowid
+
+> SQLite에서 PRIMARY KEY가 없는 경우 자동으로 증가하는 PK 컬럼
+
+```sqlite
+sqlite> SELECT rowid, * FROM classmates;
+rowid     name       age        address
+--------  ---------  ---------  ----------
+1         홍길동		  23
+2         홍길동		  30		 서울
+```
+
+
+
+## READ
+
+> SELECT: 테이블에서 데이트 조회
+>
+> 다양한 절과 함께 사용 (ORDER BY, DISTINCT, WHERE, LIMIT, GROUP BY ...)
+
+- LIMIT
+  - 쿼리에서 **반환되는 행 수를 제한**
+  - 특정 행부터 시작해서 조회하기 위해 **OFFSET** 키워드와 함께 사용하기도 함
+- OFFSET
+  - 처음부터 주어진 요소나 지점까지의 차이를 나타내는 정수형
+  - `SELECT * FROM MYTABLE LIMIT 10 OFFSET 5`: 5개를 건너띄고 6번째 행부터 10개 출력
+- WHERE
+  - 쿼리에서 반환된 행에 대한 특정 검색 **조건을 지정&**
+- SELECT DISTINCT
+  - 조회 결과에서 중복 행을 제거함
+  - DISTINCT 절은 SELECT 키워드 바로 뒤에 작성
+
+
+
+### practice
+
+> classmates 테이블에서 id, name 컬럼 값만 조회하세요
+
+```sqlite
+SELECT rowid, name FROM classmates;
+rowid name
+----- ----
+1     홍길동
+2     김철수
+3     이호영
+4 	  박민희
+5	  최혜영
+```
+
+
+
+> classmates 테이블에서 id, name 컬럼 값을 하나만 조회하세요
+
+```sqlite
+SELECT rowid, name FROM classmates LIMIT 1;
+rowid name
+----- ----
+1     홍길동
+```
+
+
+
+> classmates 테이블에서 id, name 컬럼 값을 세 번째에 있는 하나만 조회하세요
+
+```sqlite
+SELECT rowid, name FROM classmates LIMIT 1 OFFSET 2;
+rowid name
+----- ----
+3     이호영
+```
+
+
+
+> classmates 테이블에서 컬럼 값 중에 주소가 서울인 경우의 데이터를 조회하세요
+
+```sqlite
+SELECT * FROM classmates WHERE address = '서울';
+name  age  address
+----  ---  -------
+홍길동  30  서울
+```
+
+
+
+> classmates 테이블에서 age값 전체를 중복없이 조회하세요
+
+```sqlite
+SELECT DISTINCT age FROM classmates;
+age
+---
+30
+26
+29
+28
 ```
 
