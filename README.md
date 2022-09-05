@@ -108,9 +108,42 @@
     - 초기화 (반복문, 리스트 컴프리헨션)
     - 입력받기
 - [이차원 리스트의 순회, 전치, 회전](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%982_%EC%9D%B4%EC%B0%A8%EC%9B%90%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%88%9C%ED%9A%8C_%EC%A0%84%EC%B9%98_%ED%9A%8C%EC%A0%84.md)
+- [완전 탐색](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%983_%EC%99%84%EC%A0%84%ED%83%90%EC%83%891.md)
+- [그래프](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%984_%EA%B7%B8%EB%9E%98%ED%94%84.md)
+- [그래프 탐색(DFS, BFS)](https://github.com/psun0610/TIL/blob/master/05_Algorithm/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%985_%EA%B7%B8%EB%9E%98%ED%94%84%ED%83%90%EC%83%89(DFS_BFS).md)
 
+
+
+## 데이터 베이스
+
+- [SQL](https://github.com/psun0610/TIL/blob/master/06_Database/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A41_SQL.md)
+- [SQL 기초 1](https://github.com/psun0610/TIL/blob/master/06_Database/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A42_where_like_order_by.md)
+  - WHERE
+  - LIKE
+  - ORDER BY
+- [SQL 기초 2](https://github.com/psun0610/TIL/blob/master/06_Database/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A43_group_by_alter_table.md)
+  - GROUP BY
+  - ALTER TABLE
 
 ## 프론트엔드 애플리케이션 구현
+
+- [HTML과 CSS](https://github.com/psun0610/TIL/blob/master/07_Web/%EC%9B%B91_HTML%EA%B3%BC_CSS.md)
+
+- [CSS 기초](https://github.com/psun0610/TIL/blob/master/07_Web/%EC%9B%B92_css%EA%B8%B0%EC%B4%88.md)
+
+  - 크기 단위
+  - 색상 단위
+
+  - 선택자
+
+- [CSS Layout](https://github.com/psun0610/TIL/blob/master/07_Web/%EC%9B%B93_CSS_Layout.md)
+
+  - Position
+  - Display Flex
+
+- [테이블, 폼, 부트스트랩 사용](https://github.com/psun0610/TIL/blob/master/07_Web/%EC%9B%B95_table_form_bootstrap.md)
+
+
 
 ## 콘텐츠를 활용한 영상 추천 플랫폼
 
