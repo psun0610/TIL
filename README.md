@@ -167,6 +167,6 @@
 - 기업, 오픈소스 등에서 사용되는 스타일 가이드: [Google Style guide](https://google.github.io/styleguide/pyguide.html)
 - 파이썬 자습서: [Python 공식 문서 - 자습서](https://docs.python.org/ko/3/tutorial/index.html)
 - 파이썬 표준 라이브러리 레퍼런스: [Python 공식 문서 - 라이브러리 레퍼런스](https://docs.python.org/ko/3/library/index.html)
-
+- 반응형 웹과 적응형 웹: [반응형 웹, 적응형 웹 개념 정리](https://velog.io/@bityoungjae/%EB%B7%B0%ED%8F%AC%ED%8A%B8%EB%B6%80%ED%84%B0-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9%EA%B9%8C%EC%A7%80-%EA%B0%9C%EB%85%90%EC%A0%95%EB%A6%AC)
 
 
