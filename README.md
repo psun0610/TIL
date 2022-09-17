@@ -2,6 +2,8 @@
 
 > **오늘 내가 공부한 것들**
 
+&nbsp;
+
 # 📁 정리 파일 목차
 1. [마크다운](https://github.com/psun0610/TIL/tree/master/01_Markdown)
 2. [Git/GitHub](https://github.com/psun0610/TIL/tree/master/02_Git)
@@ -12,13 +14,13 @@
 7. [프론트엔드 HTML, CSS, Javascript](https://github.com/psun0610/TIL/tree/master/07_Web)
 8. [백엔드]()
 
-
+&nbsp;
 
 # 🌸 알고리즘 풀이
 
 ### [알고리즘 풀이 목록](https://github.com/psun0610/Algorithm)
 
-
+&nbsp;
 
 # 🔥 프로젝트
 
@@ -36,7 +38,7 @@
 >
 > 💡 배운점:
 
-
+&nbsp;
 
 ### [페어 프로젝트 - 영화 리뷰 사이트](https://github.com/psun0610/TeamProject_Movie2)
 > 📌 페이지 링크: [영화 리뷰 사이트](https://psun0610.github.io/TeamProject_Movie2/)
@@ -52,6 +54,8 @@
 > ⭐ 나의 역할/ 개발 내용:
 >
 > 💡 배운점:
+
+&nbsp;
 
 ### [우코테 스터디 - 삼성 갤럭시 캠퍼스 스토어 클론코딩](https://github.com/psun0610/SamsungGalaxyCampus)
 
@@ -71,7 +75,7 @@
 >
 > 💡 배운점:
 
-
+&nbsp;
 
 
 # 🧷 참고하면 좋은 자료
