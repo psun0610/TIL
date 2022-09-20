@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+.ball-container {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
+.ball-div {
+  animation: fade-in 3s;
+  height: 100%;
+  padding: .7rem 1rem;
+  background-color: white;
+  border-radius: 100rem;
+  display: flex;
+  justify-content: center;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.ball {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  margin: .7rem;
+  border-radius: 50%;
+  /* 컨텐츠 중앙, 수직 정렬 */
+  text-align: center;
+  line-height: 8rem;
+  /* 폰트 정리 */
+  font-size: xx-large;
+  font-weight: bold;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.ball:before {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at 50% 120%, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  bottom: 2.5%;
+  left: 5%;
+  opacity: 0.6;
+  height: 100%;
+  width: 90%;
+  filter: blur(5px);
+  z-index: 2;
+}
+
+h1 {
+  text-align: center;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container>button {
+  background-color:rgb(255, 237, 135);
+  padding: .8rem 1rem;
+  border-radius: 3rem;
+  border: 1px solid black;
+}
+
+.button-container>button:hover {
+  background-color: gold;
+}
