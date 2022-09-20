@@ -1,0 +1,55 @@
+/* 아래에 CSS를 작성해주세요. */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+.card {
+  /* text-align: center; */
+  width: 300px;
+}
+
+.card_image {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.contents {
+  padding:0px 14px;
+}
+
+.brand {
+  color:dimgray;
+  font-size:13px;
+  letter-spacing: -1;
+  margin:5px 0px;
+}
+
+.title {
+  font-size: 14px;
+  letter-spacing: -1;
+  margin:0px;
+  font-weight:600;
+}
+
+.price {
+  font-size:20px;
+  margin:5px 0px;
+  font-weight:900;
+}
+
+.text-blue{
+  color:rgb(76, 186, 255)
+}
+
+.review {
+  font-size:15px;
+  font-weight:900;
+}
+
+.star {
+  color:rgb(62, 62, 62);
+}
+
+.review_number {
+  color:rgb(142, 142, 142);
+}

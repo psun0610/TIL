@@ -1,0 +1,65 @@
+/* 아래에 CSS를 작성해주세요. */
+*{
+  box-sizing: border-box;
+  margin:0px;
+}
+
+.all{
+  width:900px;
+  /* background-color:aliceblue; */
+  margin:20px 20px;
+  vertical-align:top;
+
+}
+
+.cardlist{
+  margin-top:25px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-evenly;
+}
+
+.title{
+  text-align:center;
+}
+.subtitle{
+  font-size:12px;
+  letter-spacing:1px;
+}
+
+.card{
+  width:300px;
+  display:flex;
+  flex-flow:column wrap;
+  align-content:center;
+}
+
+.cardimg{
+  width:95%;
+  border-radius:10px;
+}
+
+.contents{
+  width:95%;
+  /* display:flex;
+  flex-direction:column;
+  align-items:center; */
+  padding: 0px 11px;
+}
+.feature{
+  font-size:12px;
+  color:dimgray;
+  margin-top:10px;
+}
+
+.cardtitle{
+  font-size:15px;
+  font-weight:bold;
+  letter-spacing:-1px;
+}
+
+.text{
+  font-size:11px;
+  color:darkgray;
+  letter-spacing:-1px;
+}

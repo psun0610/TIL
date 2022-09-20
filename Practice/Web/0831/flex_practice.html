@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .card_list{
+        display:flex;
+        /* flex-flow:row wrap; */
+        height:3000px;
+        width:1300px;
+        background-color: linen;
+        justify-content: space-evenly;
+        /* align-content: flex-end; */
+        align-items: flex-end;
+        /* wrap을 적용하고 한 줄짜리에 content하면 적용되지만 nowrap에서는 한 줄짜리에 content가 적용안됨 */
+      }
+      div > div {
+        width:300px;
+        height:500px;
+        background-color:pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card_list">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

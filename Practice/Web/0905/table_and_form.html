@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블과 폼 만들어보기 실습</title>
+</head>
+<body>
+  <!--table 생성-->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>이름</th>
+        <th>전공</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>박선영</td>
+        <td>소프트웨어학과</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>신짱구</td>
+        <td>스포츠학과</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>김철수</td>
+        <td>경영학과</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td>총계</td>
+        <td colspan="2">3명</td>
+      </tr>
+    </tfoot>
+    <caption>1반 학생 명단</caption>
+  </table>
+
+  <!--form 생성-->
+  <form action="">
+    <div class="input-group">
+      <label for="username">아이디</label>
+    </div>
+    <input type="text" name="username" id="username" autofocus>
+
+    <div class="input-group">
+      <label for="name">이름</label>
+    </div>
+    <input type="text" name="name" value="홍길동" id="name" disabled>
+
+    <div class="input-group">
+      <label for="agreement">개인정보 수집에 동의합니다.</label>
+    </div>
+    <input type="checkbox" name="agreement" id="agreement">
+
+    <div class="input-group">
+      <label>최종 제출을 확인합니다.</label>
+    </div>
+    <input type="checkbox">
+  </form>
+  <input type="submit" value="제출">
+</body>
+</html>

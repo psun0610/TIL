@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <style>
+  </style>
+</head>
+<body>
+<!-- 네비게이션 바 -->
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between ms-0 ms-lg-4" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">All Products</a></li>
+              <hr class="my-2">
+              <li><a class="dropdown-item" href="#">Popular Item</a></li>
+              <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+            </ul>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          <p class="d-inline-block mx-2 my-0">Cart</p>
+          <div class="d-inline-block px-2 rounded-5 text-bg-dark fw-bold" style="font-size:0.8em;">0</div>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- 현재 상품 -->
+  <main class="py-5">
+    <div class="container my-5" style="padding: 0 3.5em;">
+      <section class="row justify-content-center align-items-center">
+        <img class="col-sm-12 col-md-6 p-0 shadow" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg">
+        <article class="col-sm-12 col-md-6" style="padding: 0 2.3rem;">
+          <p style="font-size: 0.9rem" class="mb-1">SKU: BST-498</p>
+          <h1 class="fw-bold" style="font-size: 2.8rem;">Shop item template</h1>
+          <h2 class="mb-5"><span class="text-decoration-line-through">$45.00</span> $40.00</h2>
+          <div style="font-size:1.2em; font-weight:lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?</div>
+          <div class="d-flex mt-3">
+            <input class="form-control text-center me-3" type="num" style="max-width:3em;">
+            <button type="button" class="btn btn-outline-dark d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </svg>
+              <p class="d-inline-block mx-2 my-0">Add to cart</p>
+            </button>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <!-- 관련 상품 -->
+  <aside class="py-5" style="background-color:#f8f9fa">
+    <section class="container px-5">
+      <h2 class="fs-2 fw-bold mb-4">Related products</h2>
+        <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+          <!-- <div class="col px-lg-3 mb-5"> -->
+            <div class="col mb-5">
+            <div class="card h-100 shadow">
+              <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top w-100" alt="...">
+              <div class="card-body text-center">
+                <div class="mb-1">
+                  <h5 class="card-title fw-bold">Fancy Product</h5>
+                  <p class="card-text">$40.00 - $80.00</p>
+                </div>
+              </div>
+              <div class="card-footer border-top-0 bg-transparent mb-3 text-center">
+                <a href="#" class="btn btn-outline-dark">View options</a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col mb-5">
+          <div class="card h-100 position-relative shadow">
+            <div class="badge position-absolute p-1 text-bg-dark rounded-1" style="top:0.5em; right: 0.5em;">Sale</div>
+            <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body text-center">
+              <div class="mb-1">
+                <h5 class="card-title fw-bold">Special Item</h5>
+                <div class="text-warning mb-2 d-flex align-items-center justify-content-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                  </svg>
+                </div>
+                <p class="card-text"><span class=" text-secondary text-decoration-line-through">$20.00</span> $18.00</p>
+              </div>
+            </div>
+            <div class="card-footer border-top-0 bg-transparent mb-3 text-center">
+              <a href="#" class="btn btn-outline-dark">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col mb-5">
+          <div class="card h-100 shadow">
+            <div class="badge position-absolute p-1 text-bg-dark rounded-1" style="top:0.5em; right: 0.5em;">Sale</div>
+            <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top w-100" alt="...">
+            <div class="card-body text-center">
+              <div class="mb-1">
+                <h5 class="card-title fw-bold">Sale Item</h5>
+                <p class="card-text">$50.00 $25.00</p>
+              </div>
+            </div>
+            <div class="card-footer border-top-0 bg-transparent mb-3 text-center">
+              <a href="#" class="btn btn-outline-dark">Add to cart</a>
+            </div>
+          </div>
+        </div>
+
+        
+      <div class="col mb-5">
+        <div class="card h-100 shadow">
+          <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top w-100" alt="...">
+          <div class="card-body text-center">
+            <div class="mb-1">
+              <h5 class="card-title fw-bold">Popular Item</h5>
+              <div class="text-warning mb-2 d-flex align-items-center justify-content-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              </div>
+              <p class="card-text">$40.00</p>
+            </div>
+          </div>
+            <div class="card-footer border-top-0 bg-transparent mb-3 text-center">
+              <a href="#" class="btn btn-outline-dark">Add to cart</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </aside>
+
+  <footer style="height:7.5em;" class="text-bg-dark d-flex align-items-center justify-content-center">
+    <p class="m-0">Copyright © Your Website 2022</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</body>

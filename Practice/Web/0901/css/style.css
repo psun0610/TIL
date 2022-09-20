@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  min-width: 1280px;
+  color: #333333;
+  width: 80%;
+}
+
+hr {
+  margin-top:1rem;
+  margin-bottom:0;
+}
+
+.navlink {
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.navlink:link {
+  color:#333333;
+}
+.navlink:hover {
+  color:white;
+  background-color:rgb(231, 203, 203);
+  border-radius: .5rem;
+}
+
+.navlink:visited {
+  color:#333333;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: -2px;
+  background-color: white;
+}
+
+.ulist {
+  display: flex;
+}
+
+.navfont {
+  font-size:0.9rem;
+}
+
+.banner {
+  background-image: url("../assets/apparel.jpeg");
+  background-size: cover;
+  height: 700px;
+  background-repeat: no-repeat;
+}
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.section {
+  margin-top: 3rem;
+}
+.title {
+  font-size: 1.7rem;
+  color:rgb(56, 56, 56);
+}
+
+.contents {
+  margin-top: 1rem;
+  line-height: 2rem;
+}
+.section {
+  display: flex;
+  width: 1280px;
+}
+.aboutimg {
+  width: 500px;
+  border-radius: 1rem;;
+}
+
+.article {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+.more {
+  width: 1280px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin: 3rem 0;
+}
+.more_contents {
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+}
+.more_img {
+  width: 64px;
+  height: 64px;
+}
+
+.more_contents {
+  margin-top: 3rem;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more_text {
+  margin-top:1.3rem;
+  font-size: .9rem;
+}
+
+.button {
+  position: fixed;
+  /* display:scroll; */
+  bottom: 3rem;
+  right: 13rem;
+  width: 40px;
+}
+
+.pro_main {
+  width:1280px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin:5rem auto;
+}
+
+.pro_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  margin:.6rem;
+}
+
+.card_article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: .5rem;
+}
+
+.card_title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.card-img {
+  margin-top: .5rem;
+  width:350px;
+}
+.card_contents {
+  width: 350px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  line-height: 1.5rem;
+}
