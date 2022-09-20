@@ -13,21 +13,12 @@ body {
   justify-content: center;
 }
 .ball-div {
-  animation: fade-in 3s;
   height: 100%;
   padding: .7rem 1rem;
   background-color: white;
   border-radius: 100rem;
   display: flex;
   justify-content: center;
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .ball {
   position: relative;
@@ -39,7 +30,7 @@ body {
   text-align: center;
   line-height: 8rem;
   /* 폰트 정리 */
-  font-size: xx-large;
+  font-size: 32px;
   font-weight: bold;
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -60,6 +51,7 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 2rem;
 }
 
 .button-container {
@@ -75,4 +67,34 @@ h1 {
 
 .button-container>button:hover {
   background-color: gold;
+}
+
+/* 1000보다 작을 때 */
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 3.2vw;
+  }
+  .ball-container {
+    margin: 3.2000vw 0;
+  }
+  .ball-div {
+    height: 100%;
+    padding: 1.1200vw 1.6000vw;
+    border-radius: 160.0000vw;
+  }
+  .ball {
+    width: 12.8000vw;
+    height: 12.8000vw;
+    margin: 1.1200vw;
+    line-height: 12.8000vw;
+    /* 폰트 정리 */
+    font-size: 3.2vw;
+    text-shadow: -0.1000vw 0 black, 0 0.1000vw black, 0.1000vw 0 black, 0 -0.1000vw black;
+  }
+  .button-container>button {
+    padding: 1.2800vw 1.6000vw;
+    border-radius: 4.8000vw;
+    border: 0.1000vw solid black;
+    font-size: 1.6vw;
+  }
 }
