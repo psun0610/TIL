@@ -11,6 +11,8 @@ body {
   margin: 2rem 0;
   display: flex;
   justify-content: center;
+  animation-name: scale-and-fade-in;
+  animation-duration: 1s;
 }
 .ball-div {
   height: 100%;
@@ -59,14 +61,57 @@ h1 {
 }
 
 .button-container>button {
-  background-color:rgb(255, 237, 135);
+  position: relative;
+  background: linear-gradient(90deg, #ff82c5, #ff6f6f, #ffc02d, #ff76ea);
+  background-size: 200%;
   padding: .8rem 1rem;
   border-radius: 3rem;
-  border: 1px solid black;
+  border: 0;
+  font-size: 1rem;
+  color: white;
+}
+.button-container>button::before{
+  content: '';
+  position: absolute;
+  top:0;
+  left : 0;
+  right : 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #ff82c5, #ff6f6f, #ffc02d, #ff76ea);
+  background-size: 200%;
+  border-radius: 60px;
+  opacity: 0;
+  transition: 0.4s;
+}
+.button-container>button:hover {
+  animation: button-animate 3s linear infinite;
+}
+.button-container>button:hover::before {
+
+  filter: blur(20px);
+  opacity: 0.7;
+  animation-name: button-animate 3s linear infinite;
+}
+.button-container>button:active {
+  animation: button-click 1s;
 }
 
-.button-container>button:hover {
-  background-color: gold;
+@keyframes button-animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+@keyframes button-click {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* 1000보다 작을 때 */
@@ -94,7 +139,18 @@ h1 {
   .button-container>button {
     padding: 1.2800vw 1.6000vw;
     border-radius: 4.8000vw;
-    border: 0.1000vw solid black;
+    border: 0;
     font-size: 1.6vw;
+  }
+}
+
+@keyframes scale-and-fade-in {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }

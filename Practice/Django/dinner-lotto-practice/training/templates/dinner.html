@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>저메추</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    * {
+      font-family: 'Jua', sans-serif;
+    }
+    .body {
+      background-color: aliceblue;
+    }
+    .food-img {
+      width: 35rem;
+      height: 35rem;
+      object-fit: cover;
+      border-radius: 3rem;
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+<body class="body">
+  <div class="bg-white mx-auto">
+    <div class="text-center mt-5">
+      <div class="py-5 pb-4">
+        <h1 class="fs-2">오늘의 저녁 추천 메뉴</h1>
+        <p class="fs-1 fw-bold m-0">{{ food }}</p>
+      </div>
+      <img class="food-img" src="{{ foodimg }}">
+    </div>
+  </div>
+</body>
+</html>

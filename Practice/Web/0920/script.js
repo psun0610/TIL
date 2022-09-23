@@ -12,7 +12,7 @@ button.addEventListener('click', function() {
   // 공을 만들어서 =>  6개를 만들어서
   const numbers = _.sampleSize(_.range(1, 46), 6)
   console.log(numbers)
-
+  numbers.sort((a, b) => a - b);
   for (number of numbers) {
     const ball = document.createElement('div')
     ball.classList.add('ball')
@@ -43,7 +43,11 @@ button.addEventListener('click', function() {
 
   // 컨테이너를 결과 영역에 붙인다. 
   const result = document.querySelector('#result')
-  result.appendChild(ballContainer)
+  // 번호 뒤에 추가
+  // result.appendChild(ballContainer)
+  // 번호 앞에 추가
+    result.prepend(ballContainer)
+
 })
 
 // 로또 공은 5가지 색깔로 되어 있습니다.
