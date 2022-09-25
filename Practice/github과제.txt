@@ -1,0 +1,33 @@
+1번
+mkdir hello
+cd hello
+
+2번
+git init
+git remote {URL}
+touch hello.txt
+git add .
+git commit -m "create:hello.txt"
+
+3번
+git branch feature
+
+4번
+hello.txt 수정
+git add .
+git commit -m "edit:hello.txt"
+
+5번
+checkout feature
+
+6번
+hello.txt 수정
+git add .
+git commit -m "[feature] edit:hello.txt"
+
+7번
+git rebase master
+
+8번
+git checkout master
+git merge feature
