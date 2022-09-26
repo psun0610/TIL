@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="background-color:aliceblue">
+  <div class="container py-5 d-flex flex-column align-items-center">
+    <h1 class="mb-5">Lorem ipsum Korean version</h1>
+    <form action="/lipsum-result">
+      <div class="mb-3">
+        <input type="number" name="para" class="rounded-pill mx-2 ps-3 pe-2 pt-1 fs-5" placeholder="문단의 수" style="height: 2.5rem; width: 15rem; border: 2.2px solid rgb(16, 109, 44)">
+      </div>
+      <div>
+        <input type="number" name="word" class="rounded-pill mx-2 ps-3 pe-2 pt-1 fs-5" placeholder="문단별 단어의 수" style="height: 2.5rem; width: 15rem; border: 2.2px solid rgb(16, 109, 44)">
+      </div>
+      <div class="mt-4 d-flex justify-content-end">
+        <input type="submit" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+        <label class="btn btn-outline-success rounded-pill fs-5" for="success-outlined">lorem 생성하기</label>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

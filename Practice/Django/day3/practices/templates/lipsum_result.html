@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="background-color:aliceblue">
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Lorem ipsum Korean version</h1>
+    {% for ans in answer %}
+      <p>{{ ans }}</p>
+      <hr>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="background-color:aliceblue">
+  <div class="text-center py-5">
+    <h1 class="mb-5">내가 전생에 포켓몬이었던 건에 대하여</h1>
+    <form action="/pl-result">
+      <input type="text" name="plname" class="rounded-pill mx-2 ps-3 pt-1 fs-5" placeholder="이름을 입력하세요" style="height: 2.5rem; width: 20rem; border: 2.2px solid rgb(16, 109, 44)">
+      <input type="submit" class="btn-check" style="--bs-btn-bg:rgb(16, 109, 44); --bs-btn-color: white;" name="options-outlined" id="success-outlined" autocomplete="off" checked>
+      <label class="btn btn-outline-success rounded-pill fs-5" for="success-outlined">전생 확인하기</label>
+    </form>
+  </div>
+</div>
+{% endblock %}

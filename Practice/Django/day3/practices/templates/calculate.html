@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center mt-5">
+  <h1 class="fw-bold">[사칙연산]</h1>
+  <div class="mt-4">
+    <h2>{{ firstnum }} + {{ secondnum }} = {{ plus }}</h2>
+    <h2>{{ firstnum }} - {{ secondnum }} = {{ minus }}</h2>
+    <h2>{{ firstnum }} * {{ secondnum }} = {{ multi }}</h2>
+    <h2>{{ firstnum }} // {{ secondnum }} = {{ devision }}</h2>
+  </div>
+</div>
+{% endblock %}

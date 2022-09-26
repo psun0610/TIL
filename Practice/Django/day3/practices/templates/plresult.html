@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="background-color:aliceblue">
+  <div class="container text-center py-5">
+    <h1>{{ plname }}님의 전생은</h1>
+    <h2>{{ pokemon.name }}</h2>
+    <img src="{{ pokemon.imglink }}">
+  </div>
+</div>
+{% endblock %}
