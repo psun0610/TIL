@@ -27,13 +27,13 @@ class Genre(models.Model):
 
 ### 2. 생성한 클래스를 데이터베이스에 반영하기 위한 마이그레이션 파일 생성
 
-`makemigrations`를 통해 데이터베이스 설계도를 만든다.
+`makemigrations`를 통해 데이터베이스 설계도(마이그레이션 파일)를 만든다.
 
 ```bash
 $ python manage.py makemigrations
 ```
 
-
+&nbsp;
 
 ### 3. DB에 마이그레이트한다.
 
@@ -43,7 +43,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-
+&nbsp;
 
 > ### 📌Migration(마이그레이션)이란?
 >
@@ -53,4 +53,84 @@ $ python manage.py migrate
 >
 > 1. `makemigrations` : 마이그레이션 파일 생성
 > 2. `migrate`: 마이그레이션을 DB에 반영
+
+&nbsp;
+
+# ORM 기본 조작
+
+## Create
+
+1. create 메소드 활용
+
+   ```python
+   Genre.objects.create(name='발라드')
+   ```
+
+2. 인스턴스 조작
+
+   ```python
+   genre = Genre()
+   genre.name = '인디밴드'
+   genre.save()
+   ```
+
+&nbsp;
+
+## Read
+
+1. 전체 데이터 조회
+
+   ```python
+   Genre.objects.all()
+   #  <QuerySet [<Genre: Genre object (1)>, <Genre: Genre object (2)>]>
+   ```
+
+2. 일부 데이터 조회 (`get`)
+
+   ```python
+   Genre.objects.get(id=1)
+   # <Genre: Genre object (1)>
+   ```
+
+3. 일부 데이터 조회(`filter`)
+
+   ```python
+   Genre.objects.filter(id=1)
+   # <QuerySet [<Genre: Genre object (1)>]>
+   ```
+
+&nbsp;
+
+## Update
+
+```python
+# 1. genre 객체 활용
+genre = Gerne.objects.get(id=1)
+
+# 2. genre 객체 속성 변경
+genre.name = '트로트'
+
+# 3. genre 객체 저장
+genre.save()
+```
+
+
+
+## Delete
+
+```python
+# 1. genre 객체 활용
+genre = Genre.objects.get(id=1)
+
+# 2. genre 객체 삭제
+genre.delete()
+```
+
+
+
+# QuerySet API
+
+## 크기 비교
+
+### gt
 

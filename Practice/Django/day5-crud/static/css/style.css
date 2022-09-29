@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.mybtn1 {
+  width: 75px;
+}
+.mybtn2 {
+  width: 60px;
+}
+
+.cklist {
+  padding: 0 5vw;
+}
+
+.cont {
+  width: 50vw;
+  border-radius: 0.8rem;
+  margin: 5vw auto 1vw;
+  padding: 1vw 0;
+}

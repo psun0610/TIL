@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="cont shadow">
+    <h1 class="text-center my-4">Check List</h1>
+    <form action="{% url 'todos:create' %}">
+      <div class="input-group mb-3 cklist">
+        <span class="input-group-text fw-bold" id="inputGroup-sizing-default">할 일</span>
+        <input type="text" maxlength="80" name="content" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <div class="input-group mb-3 cklist">
+        <label class="input-group-text fw-bold" for="inputGroupSelect01">우선 순위</label>
+        <select name="priority" class="form-select" id="inputGroupSelect01">
+          <option selected>우선 순위를 선택해주세요</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="input-group mb-3 cklist">
+        <span class="input-group-text fw-bold" id="inputGroup-sizing-default">마감 기한</span>
+        <input type="date" min="{{ today }}" name="deadline" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+      </div>
+
+      <!--submit 버튼-->
+      <div class="input-group mb-4 cklist">
+        <button type="submit" class="btn btn-primary w-100">할 일 등록</button>
+      </div>
+    </form>
+  </div>
+
+  <table class="table text-center my-5">
+    <thead>
+      <tr>
+        <th>우선 순위</th>
+        <th>할 일 내용</th>
+        <th>생성 날짜</th>
+        <th>마감 기한</th>
+        <th>진행 상태</th>
+        <th>수정</th>
+        <th>삭제</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for todo in todos %}
+        {% if todo.completed %}
+        <tr class="table-secondary">
+        {% elif today > todo.deadline|date:'Y-m-d' %}
+        <tr class="table-danger">
+        {% else %}
+        <tr>
+        {% endif %}
+          <td clas="align-middle">{{ todo.priority }}</td>
+          <td class="align-middle">{{ todo.content }}</td>
+          <td class="align-middle">{{ todo.created_at }}</td>
+          <td class="align-middle">{{ todo.deadline }}</td>
+          {% if todo.completed %}
+          <td class="align-middle"><a href="{% url 'todos:edit' todo.pk %}" class="btn btn-success mybtn1">완료</a></td>
+          <td class="align-middle"><a href="{% url 'todos:detail' todo.pk %}" class="btn btn-primary mybtn2">수정</a></td>
+          {% elif today > todo.deadline|date:'Y-m-d' %}
+          <td class="align-middle"><a href="{% url 'todos:edit' todo.pk %}" class="btn btn-danger mybtn1 disabled">실패</a></td>
+          <td class="align-middle"><a href="{% url 'todos:detail' todo.pk %}" class="btn btn-primary mybtn2 disabled">수정</a></td>
+          {% else %}
+          <td class="align-middle"><a href="{% url 'todos:edit' todo.pk %}" class="btn btn-secondary mybtn1">진행중</a></td>
+          <td class="align-middle"><a href="{% url 'todos:detail' todo.pk %}" class="btn btn-primary mybtn2">수정</a></td>
+          {% endif %}
+          <td class="align-middle">
+            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal{{ todo.pk }}">삭제</button>
+            <div class="modal fade" id="modal{{ todo.pk }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    삭제하시겠습니까?
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <a href="{% url 'todos:delete' todo.pk %}" class="btn btn-dark">삭제</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
