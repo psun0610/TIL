@@ -12,4 +12,4 @@ class Pokemon(models.Model):
 
     # admin 모드에서 제목으로 파일 구분할 수 있게 함
     def __str__(self):
-        return str(self.title)
+        return str(self.name)

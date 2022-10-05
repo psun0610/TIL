@@ -4,7 +4,14 @@ from .models import Pokemon
 
 # Create your views here.
 def book(request):
+    relist = ['\'', ',', '[', ']']
     pokemons = Pokemon.objects.order_by('number')
+    for pokemon in pokemons:
+        pokemooon = str(pokemon.types)
+        for re in relist:
+            pokemooon = pokemooon.replace(re, '')
+        types = pokemooon.split()
+        pokemon.types = types
     context = {
         'pokemons': pokemons,
     }

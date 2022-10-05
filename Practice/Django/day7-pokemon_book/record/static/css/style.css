@@ -22,3 +22,11 @@
 .register:hover {
   color: rgba(256, 256, 256, 0.7);
 }
+
+.types {
+  background-color: rgb(218, 226, 233);
+  padding: 0.2rem 0.4rem;
+  border-radius: 2rem;
+  display: inline-block;
+  margin: 0
+}
