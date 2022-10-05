@@ -26,24 +26,15 @@ def create(request):
     pokemon = Pokemon()
     # POST
     if request.method == 'POST':
-        try:
-            pokemon.number = request.POST['number']
-        except:
-            pokemon.number = None
-        try:
-            pokemon.name = request.POST['name']
-        except:
-            pokemon.name = None
-        try:
-            pokemon.types = request.POST.getlist('types')
-        except:
-            pokemon.types = None
+        pokemon.number = request.POST['number']
+        pokemon.name = request.POST['name']
+        pokemon.types = request.POST.getlist('types')
         try:
             pokemon.image = request.FILES['image']
         except:
             pokemon.image = None
 
-        if pokemon.number != None and pokemon.name != None and pokemon.types != None:
+        if pokemon.number != '' and int(pokemon.number) > 0 and pokemon.name != '' and pokemon.types != []:
             pokemon.save()
             return redirect('record:book')
     

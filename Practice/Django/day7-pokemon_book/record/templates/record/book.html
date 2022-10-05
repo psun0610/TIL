@@ -11,14 +11,14 @@
   <title>포켓몬 도감</title>
 </head>
 <body>
-  <div class="banner px-5 py-5 pb-4">
-    <h1>포켓몬 도감</h1>
-  </div>
-  <div class="px-5 my-3">
-    <a href="{% url 'record:create' %}" class="text-dark text-decoration-none fs-5 fw-bold">도감 등록하기</a>
+  <nav class="banner px-5 py-2 mb-4 d-flex justify-content-between align-items-center">
+    <a href=""><img src="https://pokemonkorea.co.kr/img/main_logo.png"></a>
+    <a href="{% url 'record:create' %}" class="text-decoration-none fw-bold register">도감 등록하기</a>
+  </nav>
+  <div class="px-5">
     {% for pokemon in pokemons %}
       <div class="box">
-        <div class="my-3 mx-5 d-flex justify-content-between align-items-center">
+        <div class="my-4 mx-5 d-flex justify-content-between">
           <div>
             <p class="mb-1">No.{{ pokemon.number }}</p>
             <h3 class="mb-2 fw-bold">{{ pokemon.name }}</h3>
@@ -27,7 +27,7 @@
               <img src="{{ pokemon.image.url }}">
             {% endif %}
           </div>
-          <a href="{% url 'record:delete' pokemon.pk %}" class="text-light text-decoration-none"><p class="d-inline-block bg-secondary px-2 py-1 rounded-pill">삭제</p></a>
+          <a href="{% url 'record:delete' pokemon.pk %}" class="text-light text-decoration-none"><p class="d-inline-block button px-2 py-1 mt-2 rounded-pill">삭제</p></a>
         </div>
       </div>
     {% endfor %}
