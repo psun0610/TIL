@@ -27,15 +27,15 @@ def create(request):
     # POST
     if request.method == 'POST':
         try:
-            pokemon.number = request.POST.get('number')
+            pokemon.number = request.POST['number']
         except:
             pokemon.number = None
         try:
-            pokemon.name = request.POST.get('name')
+            pokemon.name = request.POST['name']
         except:
             pokemon.name = None
         try:
-            pokemon.types = request.POST.get('types')
+            pokemon.types = request.POST.getlist('types')
         except:
             pokemon.types = None
         try:

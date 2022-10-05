@@ -23,7 +23,7 @@
             <p class="mb-1">No.{{ pokemon.number }}</p>
             <h3 class="mb-2 fw-bold">{{ pokemon.name }}</h3>
             <p class="mb-1">타입: {{ pokemon.types }}</p>
-            {% if pokemon.image.url != Null %}
+            {% if pokemon.image.url != NULL %}
               <img src="{{ pokemon.image.url }}">
             {% endif %}
           </div>
