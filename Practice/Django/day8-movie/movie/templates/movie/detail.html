@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %} 
+<div class="mt-5">
+    <p>No.{{ movie.pk }}</p>
+    <h1 class="mt-3">{{ movie.title }} </h1>
+    <p>{{ movie.summary }} </p>
+    <p>{{ movie.running_time|time:'H:i:s' }} </p>
+    <a href="{% url 'movie:update' movie.pk %}"><button type="button" class="btn btn-outline-dark">수정하기</button></a>
+    <a href="{% url 'movie:delete' movie.pk %}"><button type="button" class="btn btn-outline-dark">삭제하기</button></a>    
+</div>
+{% endblock %}

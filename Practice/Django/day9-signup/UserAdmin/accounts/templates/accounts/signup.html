@@ -1,0 +1,32 @@
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    * {
+      font-family: 'KOTRAHOPE';
+      font-size: 1.1rem;
+    }
+  </style>
+</head>
+<body>
+  {% bootstrap_css %}
+  <form action="{% url 'accounts:signup' %}" method="POST">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="가입하기" %}
+  </form>
+  {% bootstrap_javascript %}
+</body>
+</html>
