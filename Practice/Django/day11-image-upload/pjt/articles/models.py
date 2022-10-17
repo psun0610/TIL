@@ -10,6 +10,6 @@ class Article(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(upload_to='images/', blank=True)
     thumbnail = ProcessedImageField(upload_to='images/', blank=True,
-                                processors=[ResizeToFill(1200, 960)],
+                                processors=[ResizeToFill(400, 300)],
                                 format='JPEG',
                                 options={'quality': 80})
