@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
+<div class="d-flex justify-content-between">
   <h2 class="my-5">게시글 목록</h2>
-  {% for article in articles %}
-  <a href="" class="text-dark text-decoration-none">
-    <div class="card" style="width: 18rem;">
-      <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.thumbnail }}">
-      <div class="card-body">
-        <p class="card-text">{{ article.title }}</p>
-      </div>
-    </div>
-  </a>
-  {% endfor %}
+  <div class="d-flex align-items-center">
+    <a href="{% url 'articles:create' %}">
+      <button button type="button" class="btn btn-primary">글 작성</button>
+    </a>
+  </div>
 </div>
+{% for article in articles %}
+<a href="{% url 'articles:detail' article.pk %}" class="text-dark text-decoration-none">
+  <div class="card" style="width: 18rem;">
+    {% if article.thumbnail %}
+    <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.thumbnail }}">
+    {% else %}
+    <img src="https://via.placeholder.com/1200x960/00ff00.png"/>
+    {% endif %}
+    <div class="card-body">
+      <p class="card-text">{{ article.title }}</p>
+    </div>
+  </div>
+</a>
+{% endfor %}
 {% endblock %}
