@@ -1,4 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
-index.html
+<div class="container">
+  <h2 class="my-5">게시글 목록</h2>
+  {% for article in articles %}
+  <a href="" class="text-dark text-decoration-none">
+    <div class="card" style="width: 18rem;">
+      <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.thumbnail }}">
+      <div class="card-body">
+        <p class="card-text">{{ article.title }}</p>
+      </div>
+    </div>
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}
