@@ -8,18 +8,20 @@
     </a>
   </div>
 </div>
-{% for article in articles %}
-<a href="{% url 'articles:detail' article.pk %}" class="text-dark text-decoration-none">
-  <div class="card" style="width: 18rem;">
-    {% if article.thumbnail %}
-    <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.thumbnail }}">
-    {% else %}
-    <img src="https://via.placeholder.com/1200x960/00ff00.png"/>
-    {% endif %}
-    <div class="card-body">
-      <p class="card-text">{{ article.title }}</p>
+<div class="row">
+  {% for article in articles %}
+  <a href="{% url 'articles:detail' article.pk %}" class="p-3 text-dark text-decoration-none col-md-6 col-xl-4 col-xxl-3">
+    <div class="card w-100" style="width: 18rem;">
+      {% if article.thumbnail %}
+      <img src="{{ article.thumbnail.url }}" class="card-img-top" alt="{{ article.thumbnail }}">
+      {% else %}
+      <img src="https://via.placeholder.com/400x300/fdc1c6.png"/>
+      {% endif %}
+      <div class="card-body">
+        <p class="card-text">{{ article.title }}</p>
+      </div>
     </div>
-  </div>
-</a>
-{% endfor %}
+  </a>
+  {% endfor %}
+</div>
 {% endblock %}

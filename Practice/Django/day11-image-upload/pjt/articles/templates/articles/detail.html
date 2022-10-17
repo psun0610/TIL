@@ -1,7 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2 class="my-5">{{ article.title }}</h2>
+{% if article.image %}
 <img src="{{ article.image.url }}" alt="{{ article.image }}" style="width: 50rem">
+{% endif %}
 <div>{{ article.content }}</div>
 <div class="text-end">
   <a href="{% url 'articles:update' article.pk %}" class="text-decoration-none">
