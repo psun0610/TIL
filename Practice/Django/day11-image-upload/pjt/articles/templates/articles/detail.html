@@ -3,4 +3,12 @@
 <h2 class="my-5">{{ article.title }}</h2>
 <img src="{{ article.image.url }}" alt="{{ article.image }}" style="width: 50rem">
 <div>{{ article.content }}</div>
+<div class="text-end">
+  <a href="{% url 'articles:update' article.pk %}" class="text-decoration-none">
+    <button type="button" class="btn btn-primary">수정</button>
+  </a>
+  <a href="{% url 'articles:delete' article.pk %}">
+    <button type="button" class="btn btn-danger">삭제</button>
+  </a>
+</div>
 {% endblock content %}
