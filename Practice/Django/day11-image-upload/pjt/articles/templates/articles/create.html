@@ -1,7 +1,22 @@
 {% extends 'base.html' %}
 {% load django_bootstrap5 %}
+{% load widget_tweaks %}
 
 {% block content %}
+<div class="container">
+  <h2 class="my-5">게시글 작성</h2>
+  <form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% bootstrap_button button_type="submit" content="작성완료" %}
+  </form>
+</div>
 
-
-{% endblock %}
+<!-- <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">
+    {{ form.title.label }}
+  </span>
+  {{ form.title|add_class:"form-control" }}
+  {{ form.errors.title }}
+</div> -->
+{% endblock content %}
