@@ -1,0 +1,76 @@
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% bootstrap_css %}
+  <style>
+    @font-face {
+    font-family: 'SEBANG_Gothic_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+    @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 400, 600;
+    font-style: normal;
+    }
+    .bc {
+      background: linear-gradient(rgb(255, 254, 223), rgb(255, 232, 212));
+      height: 100vh;
+    }
+    .title {
+      margin: 4rem 0;
+      font-family: 'SEBANG_Gothic_Bold';
+      color: white;
+      font-size: 6rem;
+      letter-spacing: 2rem;
+      text-shadow: 0 0 1rem rgb(255, 208, 0);
+    }
+    .content-box {
+      font-family: 'S-CoreDream-3Light';
+      background-color: white;
+      border-radius: 1.5rem;
+    }
+    .my-write-button {
+      font-family: 'S-CoreDream-3Light';
+      width: 100%;
+      padding: 0.5rem 0;
+      margin-bottom: 3rem ;
+      background-color: rgb(255, 253, 246);
+      color: rgb(108, 52, 10);
+      border-radius: 1.5rem;
+      border: 0;
+      box-shadow: 0 0 1rem  rgb(255, 208, 0,0.6);
+      font-weight: bold;
+    }
+    .index-title {
+      color: rgb(108, 52, 10);
+      text-decoration: none;
+    }
+    .index-title>h2 {
+      font-weight: 600;
+      font-size: 1.6rem;
+      padding: 1.2rem 0;
+    }
+    .hr {
+      width: 50%;
+      margin: 0 auto;
+      color: rgb(250, 183, 0);
+    }
+  </style>
+</head>
+<body class="bc">
+  <div class="container text-center">
+    <h1 class="title">COMMUNITY</h1>
+      {% block content %}
+      {% endblock content %}
+      {% bootstrap_javascript %}
+    </div>
+</body>
+</html>

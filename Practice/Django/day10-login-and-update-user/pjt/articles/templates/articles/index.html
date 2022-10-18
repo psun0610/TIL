@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% if request.user.is_authenticated %}
+<a href="{% url 'accounts:logout' %}">로그아웃</a>
+<a href="{% url 'accounts:update' %}">회원정보수정</a>
+<a href="{% url 'accounts:detail' request.user.pk %}">회원정보</a>
+<h1>{{ request.user }}님, 반가워요!</h1>
+{% else %}
+<a href="{% url 'accounts:signup' %}">회원가입</a>
+<a href="{% url 'accounts:login' %}">로그인</a>
+{% endif %}
+{% endblock body %}

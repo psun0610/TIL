@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+<form action="" method="post">
+  {% csrf_token %}
+  {% bootstrap_form article_form %}
+  {% bootstrap_button button_type="submit" content="작성완료" %}
+</form>
+{% endblock content %}

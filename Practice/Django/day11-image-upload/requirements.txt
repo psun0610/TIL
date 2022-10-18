@@ -1,0 +1,10 @@
+asgiref==3.5.2
+Django==3.2.13
+django-appconf==1.0.5
+django-bootstrap5==22.1
+django-imagekit==4.1.0
+pilkit==2.0
+Pillow==9.2.0
+pytz==2022.4
+six==1.16.0
+sqlparse==0.4.3
