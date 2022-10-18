@@ -2,17 +2,19 @@
 {% load django_bootstrap5 %}
 
 {% block content %}
-<a href="{% url 'articles:create' %}" class="text-decoration-none d-block">
-  <button class="my-write-button">글 작성</button>
-</a>
-<div class="content-box">
-  {% for article in articles %}
-    <a href="{% url 'articles:detail' article.pk %}" class="index-title">
-      <h2>{{ article.title }}</h2>
-    </a>
-    {% if forloop.counter != articles.count %}
-      <hr class="hr">
-    {% endif %}
-  {% endfor %}
+<div class="text-center">
+  <a href="{% url 'articles:create' %}" class="text-decoration-none d-block">
+    <button class="my-write-button">글 작성</button>
+  </a>
+  <div class="content-box">
+    {% for article in articles %}
+      <a href="{% url 'articles:detail' article.pk %}" class="index-title">
+        <h2>{{ article.title }}</h2>
+      </a>
+      {% if forloop.counter != articles.count %}
+        <hr class="hr">
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 {% endblock content %}

@@ -27,15 +27,33 @@
     .title {
       margin: 4rem 0;
       font-family: 'SEBANG_Gothic_Bold';
-      color: white;
+      color: rgb(255, 255, 255);
       font-size: 6rem;
-      letter-spacing: 2rem;
-      text-shadow: 0 0 1rem rgb(255, 208, 0);
+      /* letter-spacing: 2rem; */
     }
+    @keyframes title-shadow {
+      to {
+        text-shadow: 0 0 1rem rgb(255, 187, 0);
+      }
+    }
+    .title-ani {
+      text-shadow: 0 0 1rem rgb(255, 208, 0, 0.5);
+    }
+    .title-ani:hover {
+      animation: 0.2s title-shadow linear forwards;
+    }
+
+    /* index.html */
     .content-box {
       font-family: 'S-CoreDream-3Light';
       background-color: white;
       border-radius: 1.5rem;
+    }
+
+    @keyframes button-shadow {
+      to {
+        background-color: rgba(255, 213, 0, 0.357);
+      }
     }
     .my-write-button {
       font-family: 'S-CoreDream-3Light';
@@ -49,25 +67,64 @@
       box-shadow: 0 0 1rem  rgb(255, 208, 0,0.6);
       font-weight: bold;
     }
+    .my-write-button:hover {
+      animation: 0.2s button-shadow linear forwards
+    }
+    @keyframes index-title {
+      to {
+        color:rgb(255, 187, 0);
+      }
+    }
     .index-title {
       color: rgb(108, 52, 10);
       text-decoration: none;
     }
     .index-title>h2 {
       font-weight: 600;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       padding: 1.2rem 0;
+    }
+    .index-title>h2:hover {
+      color: rgb(108, 52, 10);
+      animation: 0.2s index-title linear forwards;
     }
     .hr {
       width: 50%;
       margin: 0 auto;
       color: rgb(250, 183, 0);
     }
+
+    /* detail.html */
+    .base-font {
+      color: rgb(108, 52, 10);
+      font-family: 'S-CoreDream-3Light';
+    }
+    .detail-box {
+      margin: 3rem 0;
+    }
+    .comment-btn {
+      display: inline-block;
+      text-align:left;
+      padding: 0.3rem 0.8rem;
+      background-color: rgb(108, 52, 10, 0.9);
+      color: white;
+      border-radius: 1rem;
+    }
   </style>
 </head>
 <body class="bc">
-  <div class="container text-center">
-    <h1 class="title">COMMUNITY</h1>
+  <div class="container">
+    <h1 class="title text-center">
+      <span class="title-ani">C</span>
+      <span class="title-ani">O</span>
+      <span class="title-ani">M</span>
+      <span class="title-ani">M</span>
+      <span class="title-ani">U</span>
+      <span class="title-ani">N</span>
+      <span class="title-ani">I</span>
+      <span class="title-ani">T</span>
+      <span class="title-ani">Y</span>
+    </h1>
       {% block content %}
       {% endblock content %}
       {% bootstrap_javascript %}
