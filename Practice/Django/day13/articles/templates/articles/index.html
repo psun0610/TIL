@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+{% if request.user.is_authenticated %}
+<div class="d-flex">
+    <a href="{% url 'accounts:logout' %}"><button type="button"class="btn btn-primary mx-2 mb-5">로그아웃</button></a>
+    <a href="{% url  'accounts:detail' request.user.pk %}"><button type="button"class="btn btn-primary mx-2 mb-5">회원정보</button></a>
+</div>
+    <h1>{{ request.user }}님, 반가워요!</h1>
+    <a href="{% url 'articles:create' %}"><button type="button"class="btn btn-primary w-100 my-5">글쓰기</button></a>
+{% else %}
+<div class="d-flex">
+    <a href="{% url 'accounts:signup' %}"><button type="button"class="btn btn-primary mx-2 mb-5">회원가입</button></a>
+    <a href="{% url 'accounts:login' %}"><button type="button"class="btn btn-primary mx-2 mb-5">로그인</button></a>
+</div>
+    <h1>로그인을 해주세요!</h1>
+{% endif %}
+
+
+<h1 class='indexcard'>글목록</h1>
+<div class="row">
+    {% for article in articles %}
+    <div class="col-4 my-3 ">
+        <div class="card  ">
+            <a href="{% url 'articles:detail' article.pk %} " class="text-decoration-none">
+                <div class="card-body d-flex justify-content-between cardbaby">
+                    <h5 class="card-title text-dark">{{ article.title }}<span>(</span>{{ article.comment_set.count}}<span>)</span></h5>
+                    <p class="text-dark">{{ article.user }}</p>
+            </a>
+            <a href="{% url 'articles:delete' article.pk %}">
+                <button class="btn btn-danger">삭제</button>
+            </a>
+        </div>
+
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center">
+  {{ request.user.username }}
+  {{ request.user.email }}
+</div>
+<div class="d-flex">
+  <div>
+    <h1>My Postings</h1>
+  </div>
+  <div>
+    <h1>My Comments</h1>
+  </div>
+</div>
+{% endblock %}

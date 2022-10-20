@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+    <div class="bg-dark text-white rounded py-5 px-5">
+        <h1>{{ article.title }}</h1>
+        <h5>{{ article.content }}</h5>
+        <p>작성자 | {{ article.user }}</p>
+    </div>
+    <hr>
+    <div class="bg-secondary text-white rounded py-5 px-5">
+        <h4 class="my-3">댓글</h4>
+        <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form comment_form layout='inline'%}<br>
+            {% bootstrap_button button_type="submit" content="작성" %}
+        </form>
+        <hr>
+        {% for comment in comments %}
+            <div class="d-flex justify-content-between">
+                <div>
+                    <p>{{ comment.user }} 님</p>
+                    <p>{{ comment.content}}</p>
+                </div>
+                <div>
+                    <form action="{% url 'articles:comment_delete' article.pk comment.pk %}" method="POST">
+                    {% csrf_token %}
+                    {% bootstrap_button button_type="submit" content="삭제" %}
+                    </form>
+                </div>
+            </div>
+        {% empty %}
+            <h5>댓글이 없어요. 첫 댓글을 작성해주세요!</h5>
+        {% endfor %}
+    </div>
+    <hr>
+    <a href="{% url 'articles:index' %}"><button type="button" class="btn btn-dark w-100">목록으로</button>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>댓글과 함께 게시판</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% bootstrap_css %}
+</head>
+<body class='baby'>
+    <div class="container my-5">
+        {% block body %}{% endblock body %}
+    </div>
+    {% bootstrap_javascript %}
+</body>
+</html>

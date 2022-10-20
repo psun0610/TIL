@@ -1,0 +1,63 @@
+{% load django_bootstrap5 %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="bc">
+  <a href="{% url 'articles:index' %}" class="text-decoration-none">
+    <div class="container">
+      <h1 class="title text-center">
+        <span class="title-ani">C</span>
+        <span class="title-ani">O</span>
+        <span class="title-ani">M</span>
+        <span class="title-ani">M</span>
+        <span class="title-ani">U</span>
+        <span class="title-ani">N</span>
+        <span class="title-ani">I</span>
+        <span class="title-ani">T</span>
+        <span class="title-ani">Y</span>
+      </h1>
+    </a>
+    <ul class="navi">
+      {% if request.user.is_authenticated %}
+      <a href="{% url 'accounts:profile' %}">
+        <li>
+          Profile
+        </li>
+      </a>
+      <a href="{% url 'accounts:logout' %}">
+        <li>
+          Logout
+        </li>
+      </a>
+      {% else %}
+        <a href="{% url 'accounts:signup' %}">
+          <li>
+            SignUp
+          </li>
+        </a>
+        <a href="{% url 'accounts:login' %}">
+          <li>
+            Login
+          </li>
+        </a>
+      {% endif %}
+      <a href="{% url 'articles:about' %}">
+        <li>
+          About
+        </li>
+      </a>
+    </ul>
+      {% block content %}
+      {% endblock content %}
+      {% bootstrap_javascript %}
+    </div>
+</body>
+</html>
