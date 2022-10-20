@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body class="bc">
+  {% if messages %}
+  {% for message in messages %}
+    <div class="alert {{ message.tags }} text-center">
+        {{ message }}
+    </div>
+  {% endfor %}
+  {% endif %}
   <a href="{% url 'articles:index' %}" class="text-decoration-none">
     <div class="container">
       <h1 class="title text-center">
@@ -57,7 +64,7 @@
     </ul>
       {% block content %}
       {% endblock content %}
-      {% bootstrap_javascript %}
     </div>
+    {% bootstrap_javascript %}
 </body>
 </html>

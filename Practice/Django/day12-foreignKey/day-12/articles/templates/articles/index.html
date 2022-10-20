@@ -9,7 +9,11 @@
   <div class="content-box">
     {% for article in articles %}
       <a href="{% url 'articles:detail' article.pk %}" class="index-title">
+        {% if article.thumbnail %}
+        <h2><img src="{{ article.thumbnail.url }}" class="me-2">{{ article.title }}</h2>
+        {% else %}
         <h2>{{ article.title }}</h2>
+        {% endif %}
       </a>
       {% if forloop.counter != articles.count %}
         <hr class="hr">

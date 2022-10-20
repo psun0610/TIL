@@ -5,13 +5,16 @@
   <div class="detail-box text-center">
     <h1>{{ article.title }}</h1>
     <div>{{ article.content }}</div>
+    {% if article.image %}
+      <img src="{{ article.image.url }}">
+    {% endif %}
     {% if article.user == request.user %}
     <div style="margin-top: 2rem; text-align: end;">
       <form action="{% url 'articles:delete' article.pk %}" method="POST">
         {% csrf_token %}
         {% bootstrap_button button_type="submit" content="del" %}
       </form>
-      {% endif %}
+    {% endif %}
     </div>
   </div>
   <div>
@@ -31,7 +34,6 @@
       </div>
       </form>
     {% endif %}
-
     <!-- 댓글 목록 -->
     <div class="content-box">
       {% for comment in article.comment_set.all %}
