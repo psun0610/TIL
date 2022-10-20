@@ -134,3 +134,29 @@ font-style: normal;
   color: white;
   border-radius: 1rem;
 }
+
+/* profile.html */
+.profile {
+  font-family: 'S-CoreDream-3Light';
+  display: flex;
+  text-align: center;
+  color:rgb(108, 52, 10);
+}
+.profile h2 {
+  font-weight: bold;
+  margin: 2rem;
+}
+.profile p {
+  margin: 0;
+  padding: 1rem;
+}
+.profile a {
+  color:rgb(108, 52, 10);
+  margin: 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.profile a:hover {
+  color: rgb(108, 52, 10);
+  animation: 0.2s index-title linear forwards;
+}
