@@ -12,7 +12,7 @@
 5. [알고리즘](https://github.com/psun0610/TIL/tree/master/05_Algorithm)
 6. [데이터베이스 SQL](https://github.com/psun0610/TIL/tree/master/06_Database)
 7. [프론트엔드 HTML, CSS, Javascript](https://github.com/psun0610/TIL/tree/master/07_Web)
-8. [백엔드]()
+8. [백엔드 Django]()
 
 &nbsp;
 

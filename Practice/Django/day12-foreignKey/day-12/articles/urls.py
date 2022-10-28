@@ -13,4 +13,6 @@ urlpatterns = [
     path('<int:article_pk>/comments/<int:comment_pk>/delete', views.comment_delete, name='comment_delete'),
     # about
     path('about/', views.about, name='about'),
+    # 좋아요
+    path('<int:article_pk>/like/', views.like, name='like'),
 ]

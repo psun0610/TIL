@@ -129,12 +129,27 @@ font-style: normal;
 .comment-btn {
   display: inline-block;
   text-align:left;
-  padding: 0.3rem 0.8rem;
-  background-color: rgb(108, 52, 10, 0.9);
   color: white;
-  border-radius: 1rem;
+  color:rgb(108, 52, 10);
+  font-weight: bold;
+  padding-left: 3px;
 }
-
+.delete-btn {
+  background-color:rgb(255, 225, 142);
+  border: 0;
+  border-radius: 16px;
+  padding: 3px 10px;
+  color:rgb(113, 72, 41);
+  font-weight: bold;
+}
+.comment-write-btn {
+  background-color: rgb(108, 52, 10, 0.9);
+  border: 0;
+  border-radius: 12px;
+  padding: 7px 20px;
+  color:white;
+  font-weight: bold;
+}
 /* profile.html */
 .profile {
   font-family: 'S-CoreDream-3Light';

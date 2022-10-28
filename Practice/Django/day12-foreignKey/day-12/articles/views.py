@@ -67,3 +67,12 @@ def comment_delete(request, article_pk, comment_pk):
 
 def about(request):
     return render(request, 'articles/about.html')
+
+
+def like(request, article_pk):
+    article = Article.objects.get(pk=article_pk)
+    if article.like.filter(pk=request.user.pk).exists():
+        article.like.remove(request.user)
+    else:
+        article.like.add(request.user)
+    return redirect('articles:detail', article_pk)

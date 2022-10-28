@@ -34,7 +34,7 @@
     </a>
     <ul class="navi">
       {% if request.user.is_authenticated %}
-      <a href="{% url 'accounts:profile' %}">
+      <a href="{% url 'accounts:profile' request.user.pk %}">
         <li>
           Profile
         </li>

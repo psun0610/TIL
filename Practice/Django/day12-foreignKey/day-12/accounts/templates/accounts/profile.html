@@ -1,31 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="text-center base-font">
-  <p>{{ request.user.username }}</p>
-  <p>{{ request.user.email }}</p>
+  <p>{{ user.username }}</p>
+  <p>팔로워 {{ user.follower.count }} | 팔로잉 {{ user.following.count }}</p>
+  {% if request.user == user %}
+    <p>{{ user.email }}</p>
+  {% endif %}
+  {% if request.user != user %}
+
+    <a href="{% url 'accounts:follow' user.pk %}">
+    {% if request.user not in user.follower.all %}
+      팔로우
+    {% else %}
+      언팔로우
+    </a>
+    {% endif %}
+  {% endif %}
 </div>
 <div class="profile">
   <div class="w-100 px-2">
-    <h2>My Postings ({{ request.user.article_set.count }})</h2>
+    <h2>My Postings ({{ user.article_set.count }})</h2>
     <div class="content-box mt-3">
-      {% for article in request.user.article_set.all %}
+      {% for article in user.article_set.all %}
         <a href="{% url 'articles:detail' article.pk %}">
           <p>{{ article.title }}</p>
         </a>
-        {% if request.user.article_set.count != forloop.counter %}
+        {% if user.article_set.count != forloop.counter %}
           <hr class="hr">
         {% endif %}
       {% endfor %}
     </div>
   </div>
   <div class="w-100 px-2">
-    <h2>My Comments ({{ request.user.comment_set.count }})</h2>
+    <h2>My Comments ({{ user.comment_set.count }})</h2>
     <div class="content-box">
-      {% for comment in request.user.comment_set.all %}
+      {% for comment in user.comment_set.all %}
         <a href="{% url 'articles:detail' comment.article_id %}">
           <p>{{ comment.content }}</p>
         </a>
-        {% if request.user.comment_set.count != forloop.counter %}
+        {% if user.comment_set.count != forloop.counter %}
           <hr class="hr">
         {% endif %}
       {% endfor %}
